@@ -1,9 +1,9 @@
 # CPSC 311 Project Proposal
 
-Name:       Ashley Lee
-ugrad ID:   TODO  
-Student ID: TODO  
-Email:      alee238@hotmail.com
+Name:       Ashley Lee  
+ugrad ID:   k7y8  
+Student ID: 34959122  
+Email:      alee238@hotmail.com  
 
 Name:       Min Seok Ray Roh  
 ugrad ID:   l9x9a  
@@ -13,53 +13,83 @@ Email:      msroh94@gmail.com
 Name:       Michelle Wilson 
 ugrad ID:   a2d0b
 Student ID: 60855087
-Email:      m888wilson@gmail.com
+Email:      m888wilson@gmail.com 
 
-Name:       Cecile Leung
-ugrad ID:   TODO  
-Student ID: TODO  
-Email:      
+Name:       Cecile Leung    
+ugrad ID:   o8r6    
+Student ID: 90600974    
+Email:      cecilephl@gmail.com    
 
-Name:       Norman Sue  
+Name:       Norman Sue      
 ugrad ID:   h0e9  
 Student ID: 20396131  
-Email       
-
-
-# Proposal Notes (Work-in-progress)
-
-
-
-
+Email       normansue3@gmail.com    
 
 # Things we've agreed upon:
+
+For our project, we're choosing option number 3.
+
+The language we're exploring is TypeScript.
 
 - Writing something in TypeScript and then writing something in JavaScript to compare
 - Web development
 
-- Who's doing what?
-    - Everybody is going to write some TS
+- Everybody is going to write some TS
 
-## Background Research
 
-Things to research and write about:
 
-- Type safety of TS versus JS
-    - Basic Types
-    - Interfaces
-    - Classes
-    - Namespaces and Modules
-    - Functions
-    - Generics
+
+## `project-background`
+
+The following sections list the TypeScript topics that we'll research. After doing individual reading, we will meet before the weekend to figure out how to put it together. We will write our research in separate text files and then combine it and format it for the research report by November 12. We will include snippets of code to demonstrate our understanding of the language features.
+
+### Michelle
+
+- Basic Types
+- Interfaces
+- Classes
+
+### Cecile
+
+- Generics
 - Mixins
-- Type Inference
-- Type Compatibility
-- Writing Definition (.d.ts) Files
-- how TS preserves runtime behavior of all JavaScript code
 
-- How does TS align with current and future ECMAScript 6 proposals.
+### Ashley
+
+- Namespaces and Modules
+- Functions
+
+### Ray
+
+- Type Inference
+- Writing Definition (.d.ts) Files
+
+### Norman
+
+- Type Compatibility
+- How TS preserves runtime behavior of all JavaScript code
+- How does TS align with current and future ECMAScript 6 proposals
+
+## `project-plan-proof`
+
+- Creating the TS classes with the type definition files to showcase all the features of the language that we want to use in the 100% deliverable.
+
+
+## Poster
+
+
+
+## `project-final`
+
+Tasks: 
+
+- Comparison with JavaScript version.
+
+
+
 
 ## Web app topic
+
 
 Our goal is to use more of the TS-specific features for our webapp.
 
@@ -75,8 +105,17 @@ Ideas:
 6. Trivia API
 7. Choose your own adventure
 8. Instagram API for pictures
+9. Clickbait article generator
+    - generate article
+    - choose picture with some API
+10. Meme generator
+
+
 
 ## Server-side 
+
+- Possible idea: no server-side component, and only client-side front-end TS/JS.
+
 
 - Are we going to have a database?
     - If not, we will need hardcoded data
@@ -84,20 +123,21 @@ Ideas:
 
 ## Client-side
 
-- Who wants to do the UI layout with the HTML and CSS?
+Possible technologies to use:
+- Bootstrap
 - jQuery
+- Who wants to do the UI layout with the HTML and CSS?
 
 ```html
     <form>...</form>
 ```
 
-- possibly using Bootstrap for front-end framework
 
 ## Miscellaneous Comments
 
 - Michelle: found lots of information about how TS is stronger/better than JS
 
-## From Microsoft TypeScript Design Goals 
+### From Microsoft TypeScript Design Goals 
 
 Question: Which of the following design goals do we want to follow/showcase?
 
