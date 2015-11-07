@@ -1,11 +1,6 @@
 # CPSC 311 Project Proposal
 
-Name:       TODO  
-ugrad ID:   TODO  
-Student ID: TODO  
-email:
-
-Name:       TODO  
+Name:       Ashley Lee
 ugrad ID:   TODO  
 Student ID: TODO  
 email:
@@ -20,7 +15,10 @@ ugrad ID:   a2d0b
 Student ID: 60855087
 email:      m888wilson@gmail.com
 
+Name:       Cecile Leung
+ugrad ID:   TODO  
+Student ID: TODO  
+
 Name:       Norman Sue  
 ugrad ID:   h0e9  
 Student ID: 20396131  
-email:
