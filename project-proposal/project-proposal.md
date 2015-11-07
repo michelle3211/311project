@@ -40,7 +40,6 @@ Email
 - Who's doing what?
     - Everybody is going to write some TS
 
-
 ## Background Research
 
 Things to research and write about:
@@ -62,11 +61,22 @@ Things to research and write about:
 
 ## Web app topic
 
+Our goal is to use more of the TS-specific features for our webapp.
+
 Ideas:
 
 1. People can't get into classes because they clash.
-2. Quiz.
-3. UBC course database access?
+2. UBC course database access?
+3. Movie recommendation system
+    - Use some 3rd-party recommendation API
+4. Game
+    - quiz
+5. Data searching
+6. Trivia API
+7. Choose your own adventure
+8. Instagram API for pictures
+
+
 
 ## Server-side 
 
