@@ -52,12 +52,13 @@ Things to research and write about:
     - Namespaces and Modules
     - Functions
     - Generics
+- Mixins
 - Type Inference
 - Type Compatibility
+- Writing Definition (.d.ts) Files
+- how TS preserves runtime behavior of all JavaScript code
 
 - How does TS align with current and future ECMAScript 6 proposals.
-
-
 
 ## Web app topic
 
@@ -96,8 +97,8 @@ Question: Which of the following design goals do we want to follow/showcase?
 2. Provide a structuring mechanism for larger pieces of code.
 3. Impose no runtime overhead on emitted programs.
 4. ~~Emit clean, idiomatic, recognizable JavaScript code. (Automatic)~~
-5. Produce a language that is composable and easy to reason about.
-6. Align with current and future ECMAScript proposals.
+5. ~~Produce a language that is composable and easy to reason about.~~
+6. Align with current and future ECMAScript proposals. 
 7. Preserve runtime behavior of all JavaScript code.
 8. Avoid adding expression-level syntax.
 9. Use a consistent, fully erasable, structural type system.
