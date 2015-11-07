@@ -106,7 +106,7 @@ Ideas:
 6. Trivia API
 7. Choose your own adventure
 8. Instagram API for pictures
-9. Clickbait article generator
+9. Clickbait article generator (most likely topic)
     - generate article
     - choose picture with some API
 10. Meme generator
