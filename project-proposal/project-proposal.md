@@ -3,15 +3,24 @@
 Name:       TODO  
 ugrad ID:   TODO  
 Student ID: TODO  
+email:
 
 Name:       TODO  
 ugrad ID:   TODO  
 Student ID: TODO  
+email:
 
 Name:       TODO  
 ugrad ID:   TODO  
 Student ID: TODO  
+email:
+
+Name:       Michelle Wilson 
+ugrad ID:   a2d0b
+Student ID: 60855087
+email:      m888wilson@gmail.com
 
 Name:       Norman Sue  
 ugrad ID:   h0e9  
 Student ID: 20396131  
+email:
