@@ -10,10 +10,10 @@ ugrad ID:   TODO
 Student ID: TODO  
 email:
 
-Name:       TODO  
-ugrad ID:   TODO  
-Student ID: TODO  
-email:
+Name:       Min Seok Ray Roh  
+ugrad ID:   l9x9a  
+Student ID: 33737123  
+email:      msroh94@gmail.com
 
 Name:       Michelle Wilson 
 ugrad ID:   a2d0b
