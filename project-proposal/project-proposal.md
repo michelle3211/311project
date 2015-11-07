@@ -76,8 +76,6 @@ Ideas:
 7. Choose your own adventure
 8. Instagram API for pictures
 
-
-
 ## Server-side 
 
 - Are we going to have a database?
