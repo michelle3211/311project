@@ -70,25 +70,26 @@ The following sections list the TypeScript topics that we'll research. After doi
 - How TS preserves runtime behavior of all JavaScript code
 - How does TS align with current and future ECMAScript 6 proposals
 
+## How we'll meet the 100%
+
+We will be writing a web application which will use all of the features that we will be researching in the breakdown in the previous section.
+
+```
+Create a substantial program in a potentially useful but unusual (not "mainstream"; ideally, not even close to mainstream) language that you have not already studied. Your program should illustrate the particular features and benefits of the language.
+```
+
 ## `project-plan-proof`
 
-- Creating the TS classes with the type definition files to showcase all the features of the language that we want to use in the 100% deliverable.
-
+After writing the background research report, we will write and implement the TypeScript classes with the associated type definition files (`*.d.ts`) to showcase all the features of the language that we want to use in the 100% deliverable.
 
 ## Poster
 
-
+We will have snippets of code on our poster comparing JavaScript and TypeScript, using the features that we've researched to show how they're beneficial to the programmer.
 
 ## `project-final`
 
-Tasks: 
 
-- Comparison with JavaScript version.
-
-
-
-
-## Web app topic
+### Web app topic
 
 
 Our goal is to use more of the TS-specific features for our webapp.
