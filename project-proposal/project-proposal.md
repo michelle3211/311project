@@ -8,10 +8,10 @@ Email:      alee238@hotmail.com
 Name:       Min Seok Ray Roh  
 ugrad ID:   l9x9a  
 Student ID: 33737123  
-Email:      msroh94@gmail.com
+Email:      msroh94@gmail.com  
 
-Name:       Michelle Wilson 
-ugrad ID:   a2d0b
+Name:       Michelle Wilson    
+ugrad ID:   a2d0b   
 Student ID: 60855087
 Email:      m888wilson@gmail.com 
 
@@ -25,19 +25,9 @@ ugrad ID:   h0e9
 Student ID: 20396131  
 Email       normansue3@gmail.com    
 
-# Things we've agreed upon:
+# Overview
 
-For our project, we're choosing option number 3.
-
-The language we're exploring is TypeScript.
-
-- Writing something in TypeScript and then writing something in JavaScript to compare
-- Web development
-
-- Everybody is going to write some TS
-
-
-
+We're choosing project type 3 by researching the TypeScript language and implementing a substantial web application using the language-specific knowledge we've gained. Additionally, we will compare our TypeScript program against a JavaScript version to showcase the advantages of TypeScript.
 
 ## `project-background`
 
@@ -74,10 +64,6 @@ The following sections list the TypeScript topics that we'll research. After doi
 
 We will be writing a web application which will use all of the features that we will be researching in the breakdown in the previous section.
 
-```
-Create a substantial program in a potentially useful but unusual (not "mainstream"; ideally, not even close to mainstream) language that you have not already studied. Your program should illustrate the particular features and benefits of the language.
-```
-
 ## `project-plan-proof`
 
 After writing the background research report, we will write and implement the TypeScript classes with the associated type definition files (`*.d.ts`) to showcase all the features of the language that we want to use in the 100% deliverable.
@@ -87,6 +73,8 @@ After writing the background research report, we will write and implement the Ty
 We will have snippets of code on our poster comparing JavaScript and TypeScript, using the features that we've researched to show how they're beneficial to the programmer.
 
 ## `project-final`
+
+
 
 
 ### Web app topic
@@ -110,7 +98,6 @@ Ideas:
     - generate article
     - choose picture with some API
 10. Meme generator
-
 
 
 ## Server-side 
