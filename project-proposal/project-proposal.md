@@ -40,6 +40,25 @@ Email
 - Who's doing what?
     - Everybody is going to write some TS
 
+
+## Background Research
+
+Things to research and write about:
+
+- Type safety of TS versus JS
+    - Basic Types
+    - Interfaces
+    - Classes
+    - Namespaces and Modules
+    - Functions
+    - Generics
+- Type Inference
+- Type Compatibility
+
+- How does TS align with current and future ECMAScript 6 proposals.
+
+
+
 ## Web app topic
 
 Ideas:
