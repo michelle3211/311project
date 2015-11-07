@@ -68,6 +68,15 @@ We will be writing a web application which will use all of the features that we 
 
 After writing the background research report, we will write and implement the TypeScript classes with the associated type definition files (`*.d.ts`) to showcase all the features of the language that we want to use in the 100% deliverable.
 
+## Starting-point research documents
+
+- http://learnxinyminutes.com/docs/typescript/
+- https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md (edited)
+- https://github.com/Microsoft/TypeScript/wiki/TypeScript-Design-Goals (edited)
+- https://github.com/Microsoft/TypeScript/wiki (edited)
+- http://www.typescriptlang.org/Handbook
+- http://www.definitelytyped.org/
+
 ## Poster
 
 We will have snippets of code on our poster comparing JavaScript and TypeScript, using the features that we've researched to show how they're beneficial to the programmer.
