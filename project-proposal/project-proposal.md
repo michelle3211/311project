@@ -74,15 +74,13 @@ We will have snippets of code on our poster comparing JavaScript and TypeScript,
 
 ## `project-final`
 
-
-
-
-### Web app topic
-
-
 Our goal is to use more of the TS-specific features for our webapp.
 
 Ideas:
+
+1. Clickbait article generator (most likely topic)
+    - generate article
+    - choose picture with some API
 
 1. People can't get into classes because they clash.
 2. UBC course database access?
@@ -94,16 +92,11 @@ Ideas:
 6. Trivia API
 7. Choose your own adventure
 8. Instagram API for pictures
-9. Clickbait article generator (most likely topic)
-    - generate article
-    - choose picture with some API
 10. Meme generator
-
 
 ## Server-side 
 
 - Possible idea: no server-side component, and only client-side front-end TS/JS.
-
 
 - Are we going to have a database?
     - If not, we will need hardcoded data
@@ -119,7 +112,6 @@ Possible technologies to use:
 ```html
     <form>...</form>
 ```
-
 
 ## Miscellaneous Comments
 
