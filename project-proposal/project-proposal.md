@@ -98,7 +98,7 @@ We will also need to plan out the following details:
 
 # Poster
 
-Our poster will have snippets of code from our proof-of-concept classes comparing JavaScript and TypeScript, using the features that we've researched to show how they're beneficial to a potential TypeScript programmer.
+Our poster will summarize and explain our TypeScript language research to show how they could be beneficial to our peers and why they might want to consider using TypeScript for their next programming project. We plan on using diagrams and including snippets of code on our poster comparing the TypeScript code, compiled JavaScript, and JavaScript files written from scratch.
 
 # Final Project (`project-final`)
 
