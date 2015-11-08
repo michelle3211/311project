@@ -72,7 +72,7 @@ Starting point documents for our research:
 
 After writing the background research report, we will write and implement the necessary TypeScript modules and classes with the associated type definition files (`.d.ts` files) to showcase all the features of the language that we want to use in the 100% deliverable web application.
 
-Simultaneously, we will also write the less-type-safe JavaScript analogue classes for the ones we write in TypeScript Since TypeScript compiles to JavaScript, this means we will have two resulting sets of JavaScript files: one that is compiled from the TypeScript we will write, and another that is written from scratch without the type safeness and advanced features that TypeScript provides.
+Simultaneously, we will also write the less-type-safe JavaScript analogue classes for the ones we write in TypeScript Since TypeScript compiles to JavaScript, this means we will have two resulting sets of JavaScript files (for this proof-of-concept phase only, not the final project): one that is compiled from the TypeScript we will write, and another that is written from scratch without the type safeness and advanced features that TypeScript provides.
 
 In order to know what classes and modules to build for the proof-of-concept, we will be deciding upon the required functionalities of the web application by:
 
