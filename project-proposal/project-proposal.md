@@ -33,11 +33,13 @@ Email       normansue3@gmail.com
 **Project Topic:** TypeScript  
 **Target Completion Level:** 100%  
 
-Our group will research features of the TypeScript language and use the knowledge gained to build a substantial web application that generates "linkbait articles".
+Our group will research features of the TypeScript language and use the knowledge gained to build a substantial web application that generates linkbait[^1] articles.
 
 Additionally, we will compare our TypeScript program against an analogous JavaScript version of the program, written from scratch, to showcase the advantages of using TypeScript over JavaScript.
 
 We are coordinating online communication via [Slack](https://cpsc311project.slack.com) and documentation via [GitHub](https://github.com/michelle3211/311project).
+
+[^1]: Linkbait: Content designed to attract attention and encourage those viewing it to create hyperlinks to the site, with the aim of improving the site's position on the list of results returned by a search engine. 
 
 # Background Research Report (`project-background`)
 
