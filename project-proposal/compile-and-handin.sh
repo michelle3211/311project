@@ -12,7 +12,7 @@ PANDOC_CMD=/usr/local/bin/pandoc
 
 if [ -f $PANDOC_CMD ]; then
     echo "compiling Markdown to PDF"
-    $PANDOC_CMD --latex-engine=xelatex -i ./$SUBMISSION.md -o ./$SUBMISSION.pdf
+    $PANDOC_CMD --latex-engine=xelatex ./$SUBMISSION.md -o ./$SUBMISSION.pdf
 else
     echo "$PANDOC_CMD not found; not compiling Markdown to PDF"
 fi
