@@ -103,18 +103,6 @@ Ideas:
     - generate article
     - choose picture with some API
 
-1. People can't get into classes because they clash.
-2. UBC course database access?
-3. Movie recommendation system
-    - Use some 3rd-party recommendation API
-4. Game
-    - quiz
-5. Data searching
-6. Trivia API
-7. Choose your own adventure
-8. Instagram API for pictures
-10. Meme generator
-
 ## Server-side 
 
 - Possible idea: no server-side component, and only client-side front-end TS/JS.
@@ -130,26 +118,4 @@ Possible technologies to use:
 - jQuery
 - Who wants to do the UI layout with the HTML and CSS?
 
-```html
-    <form>...</form>
-```
 
-## Miscellaneous Comments
-
-- Michelle: found lots of information about how TS is stronger/better than JS
-
-### From Microsoft TypeScript Design Goals 
-
-Question: Which of the following design goals do we want to follow/showcase?
-
-1. Statically identify constructs that are likely to be errors.
-2. Provide a structuring mechanism for larger pieces of code.
-3. Impose no runtime overhead on emitted programs.
-4. ~~Emit clean, idiomatic, recognizable JavaScript code. (Automatic)~~
-5. ~~Produce a language that is composable and easy to reason about.~~
-6. Align with current and future ECMAScript proposals. 
-7. Preserve runtime behavior of all JavaScript code.
-8. Avoid adding expression-level syntax.
-9. Use a consistent, fully erasable, structural type system.
-10. Be a cross-platform development tool.
-11. Do not cause substantial breaking changes from TypeScript 1.0.
