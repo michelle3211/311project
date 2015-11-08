@@ -1,4 +1,4 @@
-# CPSC 311 Project Proposal
+# CPSC 311 Project Proposal (Team T3)
 
 Name:       Ashley Lee  
 ugrad ID:   k7y8  
@@ -10,78 +10,90 @@ ugrad ID:   l9x9a
 Student ID: 33737123  
 Email:      msroh94@gmail.com  
 
-Name:       Michelle Wilson    
+Name:       Michelle Wilson   
 ugrad ID:   a2d0b   
-Student ID: 60855087
-Email:      m888wilson@gmail.com 
+Student ID: 60855087  
+Email:      m888wilson@gmail.com  
 
-Name:       Cecile Leung    
-ugrad ID:   o8r6    
-Student ID: 90600974    
-Email:      cecilephl@gmail.com    
+Name:       Cecile Leung  
+ugrad ID:   o8r6  
+Student ID: 90600974  
+Email:      cecilephl@gmail.com  
 
-Name:       Norman Sue      
+Name:       Norman Sue  
 ugrad ID:   h0e9  
 Student ID: 20396131  
-Email       normansue3@gmail.com    
+Email       normansue3@gmail.com  
 
 # Overview
 
-We're choosing project type 3 by researching the TypeScript language and implementing a substantial web application using the language-specific knowledge we've gained. Additionally, we will compare our TypeScript program against a JavaScript version to showcase the advantages of TypeScript.
+**Project Type:** 3  
+**Project Topic:** TypeScript  
+**Target Completion Level:** 100%  
 
-## `project-background`
+Our group will research features of the TypeScript language and use the knowledge gained to build a substantial web application that generates "linkbait articles".
 
-The following sections list the TypeScript topics that we'll research. After doing individual reading, we will meet before the weekend to figure out how to put it together. We will write our research in separate text files and then combine it and format it for the research report by November 12. We will include snippets of code to demonstrate our understanding of the language features.
+Additionally, we will compare our TypeScript program against a JavaScript version to showcase the advantages of TypeScript.
 
-### Michelle
+## Background Research Report `project-background`
+
+For our background research report, we plan to do further research based on the topics listed in Microsoft's official TypeScript GitHub wiki [page](https://github.com/Microsoft/TypeScript/wiki) and have divvied up the topics as follows:
+
+Michelle
 
 - Basic Types
 - Interfaces
 - Classes
 
-### Cecile
+Cecile
 
 - Generics
 - Mixins
 
-### Ashley
+Ashley
 
 - Namespaces and Modules
 - Functions
 
-### Ray
+Ray
 
 - Type Inference
-- Writing Definition (.d.ts) Files
+- Writing Type Definition Files
 
-### Norman
+Norman
 
 - Type Compatibility
 - How TS preserves runtime behavior of all JavaScript code
-- How does TS align with current and future ECMAScript 6 proposals
+- How TS aligns with current and future ECMAScript proposals
 
-## How we'll meet the 100%
+After doing individual reading, we individually type up our findings in separate plaintext files, and then meet on November 13 to combine the content and format it to produce the background research report. 
 
-We will be writing a web application which will use all of the features that we will be researching in the breakdown in the previous section.
+We'll include snippets of code executable TypeScript code to demonstrate our understanding of the language features that we're researching.
 
-## `project-plan-proof`
-
-After writing the background research report, we will write and implement the TypeScript classes with the associated type definition files (`*.d.ts`) to showcase all the features of the language that we want to use in the 100% deliverable.
-
-## Starting-point research documents
+Starting point documents for our research
 
 - http://learnxinyminutes.com/docs/typescript/
-- https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md (edited)
-- https://github.com/Microsoft/TypeScript/wiki/TypeScript-Design-Goals (edited)
-- https://github.com/Microsoft/TypeScript/wiki (edited)
+- https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md
+- https://github.com/Microsoft/TypeScript/wiki/TypeScript-Design-Goals
+- https://github.com/Microsoft/TypeScript/wiki
 - http://www.typescriptlang.org/Handbook
 - http://www.definitelytyped.org/
 
+## Proof-of-Concept and Plan `project-plan-proof`
+
+After writing the background research report, we will write and implement the necessary TypeScript modules and classes with the associated type definition files (`.d.ts` files) to showcase all the features of the language that we want to use in the 100% deliverable web application.
+
+Simultaneously, we will also write the less-type-safe JavaScript analogue classes for the ones we write in TypeScript. Since TypeScript compiles to JavaScript, this means we will have two sets of JavaScript files: one that is type safe and compiled from the TypeScript we will write, and another that is written from scratch without the type safeness and advanced features that TypeScript provides.
+
 ## Poster
 
-We will have snippets of code on our poster comparing JavaScript and TypeScript, using the features that we've researched to show how they're beneficial to the programmer.
+Our poster will have snippets of code from our proof-of-concept classes comparing JavaScript and TypeScript, using the features that we've researched to show how they're beneficial to the programmer.
 
 ## `project-final`
+
+Using the TypeScript modules and class files built for our proof-of-concept, we will implement the remaining parts of the web application that will generate linkbait articles. 
+
+
 
 Our goal is to use more of the TS-specific features for our webapp.
 
