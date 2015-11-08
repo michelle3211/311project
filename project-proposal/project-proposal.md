@@ -72,9 +72,15 @@ Starting point documents for our research:
 
 After writing the background research report, we will write and implement the necessary TypeScript modules and classes with the associated type definition files (`.d.ts` files) to showcase all the features of the language that we want to use in the 100% deliverable web application.
 
-Simultaneously, we will also write the less-type-safe JavaScript analogue classes for the ones we write in TypeScript Since TypeScript compiles to JavaScript, this means we will have two resulting sets of JavaScript files (for this proof-of-concept phase only, not the final project): one that is compiled from the TypeScript we will write, and another that is written from scratch without the type safeness and advanced features that TypeScript provides.
+Simultaneously, we will also write the less-type-safe JavaScript analogue classes for the ones we write in TypeScript Since TypeScript compiles to JavaScript, this means we will have 3 resulting sets of JavaScript files (for this proof-of-concept phase only, not the final project): 
 
-In order to know what classes and modules to build for the proof-of-concept, we will be deciding upon the required functionalities of the web application by:
+1. A set of TypeScript source files.
+2. A set of JavaScript files compiled from the TypeScript files.
+3. A set of JavaScript files written from scratch, analogous to the TypeScript files.
+
+Comparing the differences between the file sets #2 and #3 will be one of the components of our proof-of-concept report.
+
+For the plan of the implementation of the final project, we will be deciding upon the required functionalities of the web application by:
 
 1. Documenting user stories.
 2. Breaking down user stories into individual tasks.
@@ -82,7 +88,7 @@ In order to know what classes and modules to build for the proof-of-concept, we 
 4. Delegating tasks amongst ourselves.
 5. Drawing any necessary UML class digrams.
 
-We will also need to plan out the following:
+We will also need to plan out the following details:
 
 - what browsers we will support
 - what the visual layout of our web application will be
