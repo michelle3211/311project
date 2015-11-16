@@ -82,11 +82,21 @@ Creating an additional TypeScript project provides future potential TypeScript p
 TODO: Add reference to research paper about how using a typed language increased productivity and make comment about how that adds value.
 
 # Project Importance
-Clickbait is a term for headlines that catch people's attention and curiosity enough for them to follow a link. The main goal is to make the user click through for advertisement revenue on websites. Secondary is the content, which has a reputation for being of very low quality. They exist due to a business model whereby the more visitors there are to a website, the more advertisers are willing to pay to use that site. Ads on that site gain more visibility with each visitor and can have further referral links. More visitors can also affect a site's rank when it shows up on search results. Therefore, any click-through on a link can have compounding effects on visibility and subsequently revenue from advertising.
-- negatives
-- possible positives
-- our goal
+### Background
+Clickbait is a term for headlines that catch people's attention and curiosity enough for them to follow a link. The main goal is for the user to click through to the target website. Secondary is the content, which has a reputation for being of very low quality. They exist due to a business model whereby the more visitors there are to a website, the more advertisers are willing to pay to use that site. Ads on that site gain more visibility with each visitor and can have further referral links. More visitors can also affect a site's rank when it shows up on search results due to search engine optimization (SEO) rules. Therefore, any click-through on a link can have compounding effects on visibility and subsequently revenue from advertising.
 
+### Negatives and side-effects
+Clickbait (also known as linkbait) has a reputation for having low quality content on their target sites. The headline may read like news, but the articles are often hastily created with little research, no insight, misleading information, or they can be outright advertisements masquerading as impartial articles. Consumers may become annoyed at seeing them, resulting in some backlash from readers [@333]. It can also affect the way content is created and can encourage poor journalism [@334]. So, there is little _inherent_ value to creating clickbait. However, we may gain some beneficial knowledge as a byproduct. Creating successful clickbait involves the psychology of curiosity and motivation. If we can learn more about what works, we can put it to good use (without annoying the readership) by providing high quality content at the target site. For example, actual information.
+
+### Our goal
+...
+
+**References for this section**
+[@333]
+"Saving Us From Ourselves: The Anti-Clickbait Movement." _Daily Beast_. Emily Shire. 14 Jul 2014. 16 Nov 2015. <http://www.thedailybeast.com/articles/2014/07/14/saving-us-from-ourselves-the-anti-clickbait-movement.html>
+
+[@334]
+"Clickbait: The changing face of online journalism." _BBC News_. Ben Frampton. 14 Sep 2015. 16 Nov 2015. <http://www.bbc.com/news/uk-wales-34213693>
 
 # Project Impact
 
