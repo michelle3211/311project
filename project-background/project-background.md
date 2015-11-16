@@ -36,18 +36,49 @@ Email       normansue3@gmail.com
 
 # Project Value and Importance
 
+
 >> value in everyday programming practice—an
 
 >> you must base that description on existing work. How much? That will differ from project to project, but we'll try to quantify by saying "at least the equivalent of three CS conference research papers used suitably to support your description"
 
 >> perhaps because of industrial or research impact
 
+
+
+
 Ideas:
 
 - find specific GitHub Issues of existing JS projects with `TypeError` or other runtime-related errors that could be prevented with TS
     - Q: What specific `Error`s does TS prevent?
 
+- ES6
+
 # Industry Impact of Project
+
+- difficult to see good examples of TS, how it can be useful
+
+Of the most popular compile-to-JS languages, TypeScript greatly lags behind in adoption and has significantly fewer exemplary repositories to draw inspiration from. There are currently 8,267 TypeScript repositories on GitHub, compared with the 1.7 million JavaScript and 54,605 CoffeeScript repositories.
+
+## Increase language visibility
+
+- TS GitHub repo dearth
+    - exemplary repo for using different TS features
+
+## Improve language visibility
+
+The most popular TypeScript repository is Google's Angular 2, but it's drawn criticism from developers, which may be giving TypeScript a negative image amongst programmers.
+
+## Contribute to existing TypeScript community
+
+- TS npm module dearth
+    - could modularize and publish as lightweight npm modules
+
+- quick Node.js and npm explanation
+- Use existing npm modules and write additional TS def files
+
+    double check with https://github.com/asgerf/tscheck
+        based on paper by Google researcher https://cs.au.dk/~amoeller/papers/tscheck/paper.pdf
+
 
 # Relation to Existing Context
 
@@ -63,3 +94,15 @@ Ideas:
 Novel technical aspects of the project topic are summarized using appropriate programming languages terminology
 
 The technical aspects you describe should include any needed for the project proof-of-concept and plan, even if you're stopping at the 80% level.)
+
+
+### Unsorted refs
+
+
+@100 http://noeticforce.com/alternative-programming-languages-that-compile-to-javascript
+
+
+
+### Possible refs
+
+https://users.soe.ucsc.edu/~abadi/Papers/FTS-submitted.pdf
