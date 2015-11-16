@@ -6,3 +6,8 @@ Benefits of JavaScript
 - pass in parameters as a list and treat them as a group
 - 'this', no longer need to remember the context yourself, you can bind it
 - easier to maintain code when typed
+
+From type inferences
+
+- best common type for parsing existing linkbait text, to maintain type-agnosticit
+- contextual typing for well-known type definedd libraries like jQuery
