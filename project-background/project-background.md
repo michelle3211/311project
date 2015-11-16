@@ -46,7 +46,11 @@ We've chosen to publish our project as an `npm` module because, according to [mo
 
 TypeScript language features to be used by the module:
 
-- TODO
+Functions:
+
+As TypeScript is a superscript of JavaScript, there are similarities between them, however, when writing the former, there are differences that will compile into the latter. These differences make give flexibility in writing functions. Functions in general build layers of abstraction, mimicking classes, information hiding, and module functionality. TypeScript functions share this with JavaScript, but they add new capability to JavaScript functions. Function types in TypeScript have two parts, the type of the arguments and the return type. The parameters are identified by type, so any name can be used, while return types are made clear with a '=>' symbol. TypeScript has type inference in the form of contextual typing, which helps cut down work needed to keep the program typed. Contextual typing happens when assigning a function to a variable with a type, but it only has types on one side of the assignment. Another feature of TypeScript is that every parameter is assumed to be required in a function, which will be checked by the compiler. Therefore, the number of parameters passed in, need to match the number assigned to the function. However, TypeScript allows optional parameters, and the ability to set a default if a parameter is not passed in. It also allows a user to pass in a list of parameters, known as rest, so that the function can use them as a group rather than individually. Rest parameters can be any size, even empty. TypeScript also solves the problem of using 'this' in JavaScript. TypeScript allows functions to bind to the right ‘this’ to use, simplifying the problem of having to know about what context it is when using it in a function. To conclude, while TypeScript builds off of JavaScript, it simplifies writing functions, which will compile into the more complex JavaScript at runtime. It allows for clearer typing than JavaScript, which makes it easier to maintain typed programs, and will reduce difficulty in coding our linkbait article generator. 
+
+
 - TODO
 - TODO
 
