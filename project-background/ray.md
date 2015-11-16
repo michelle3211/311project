@@ -30,28 +30,28 @@ provided, the “Best common type” feature of type inference is used.
 Consider the below case where multiple data types are used to form
 an array called.
 
-var car1 = \[new Honda(), new Jaguar(), new Car\_company()\];
+var car1 = [new Honda(), new Jaguar(), new Car_company()];
 
 As you can see above, all three elements in the array are different
 in terms of their data type. The best common type algorithm checks
 all the types of elements in the array and “picks the type that is
 compatible with all the other candidates.” (TypeScript Handbook)
 Suppose the super type of the class Honda and class Jaguar are
-Car\_company, the algorithm will pick Car\_company as the type of
+Car_company, the algorithm will pick Car_company as the type of
 the variable car due to its “compatibility.”
 
 How about the case where no one type is a super type of the others?
 Consider the case below:
 
-var car2 = \[new Honda(), new Jaguar(), new Mazda(), new BMW()\];
+var car2 = [new Honda(), new Jaguar(), new Mazda(), new BMW()];
 
-Suppose the class Car\_company is a super type of all of the
+Suppose the class Car_company is a super type of all of the
 elements in the array car2, no element in the array has the type
-of Car\_company. In order to revise this correctly, the data type
+of Car_company. In order to revise this correctly, the data type
 should be provided explicitly as following.
 
-var car2: Car\_company \[\]= \[new Honda(), new Jaguar(), new
-Mazda(), new BMW()\];
+var car2: Car_company []= [new Honda(), new Jaguar(), new
+Mazda(), new BMW()];
 
 When no best common type is found by the algorithm, the type
 inference results in the “empty object type, {}.” Due to the lack of
