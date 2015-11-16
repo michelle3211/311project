@@ -36,8 +36,30 @@ Email       normansue3@gmail.com
 
 >> Potential project—the one you'd do for the 100% level—is described in the context of the project topic. 
 
-# Project Value and Importance
+For the 100%-level milestone, we would complete the following:
 
+1. Write and publish an `npm` module in TypeScript which generates a JSON representation of "linkbait articles"
+2. Write missing TypeScript type definition files for third-party `npm` module dependencies
+3. Verify that all of our written TypeScript type definition files are bugfree with [tscheck](https://github.com/asgerf/tscheck)
+4. Use our `npm` module to create a simple API server that serves 
+
+An explanation of how each of these components showcases TypeScript language features is given in the next sections.
+
+## Linkbait Article JSON generator `npm` module
+
+TypeScript language features to be used by the module:
+
+- TODO
+- TODO
+- TODO
+
+## Type definition files for third-party `npm` module dependencies
+
+We plan on scraping the text content of existing websites in order to generate our own linkbait articles. This will require using the existing [pjscrape](https://github.com/nrabinowitz/pjscrape) JavaScript web scraping library. 
+
+
+
+# Project Value and Importance
 
 >> value in everyday programming practice
 
@@ -45,14 +67,8 @@ Email       normansue3@gmail.com
 
 >> perhaps because of industrial or research impact
 
-Ideas:
-
-- find specific GitHub Issues of existing JS projects with `TypeError` or other runtime-related errors that could be prevented with TS
-    - Q: What specific `Error`s does TS prevent?
-
-- ES6
-
 # Industry Impact of Project
+
 
 - difficult to see good examples of TS, how it can be useful
 
@@ -115,4 +131,11 @@ https://users.soe.ucsc.edu/~abadi/Papers/FTS-submitted.pdf
 - metaprogramming something
 - news article scraper with type checking
 
+### Misc Ideas
 
+Ideas:
+
+- find specific GitHub Issues of existing JS projects with `TypeError` or other runtime-related errors that could be prevented with TS
+    - Q: What specific `Error`s does TS prevent?
+
+- ES6
