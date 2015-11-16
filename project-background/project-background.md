@@ -137,6 +137,11 @@ By publishing a library using this relatively-new build process, we are contribu
 
 
 
+
+
+>> Explaining why the language is suitable for the project (in part, by comparing it to other, somewhat similar  languages) would be part of putting the project in context.  For example, if I were doing a project in Haskell that used lazy evaluation to traverse an infinite decision tree, I might discuss why lazy evaluation is well-suited, and point out that SML and Racket are less well-suited because they aren't lazy.
+
+
 ### Unsorted refs
 
 
