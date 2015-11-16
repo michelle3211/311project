@@ -33,7 +33,7 @@ Email       normansue3@gmail.com
 For the 100%-level milestone, we would complete the following:
 
 1. Write and publish an `npm` module in TypeScript which generates a JSON representation of linkbait articles.
-2. Write missing TypeScript type definition files for third-party `npm` module dependencies.
+2. Write missing TypeScript type definition files for third-party `npm` modules that our `npm` module depends on.
 3. Verify that all of our written TypeScript type definition files are bugfree with [tscheck](https://github.com/asgerf/tscheck).
 4. Use our `npm` module to create a simple Node.js+Express API server that runs the web scraper code and sends the resulting JSON articles to the browser client.
 5. Write a TypeScript single-page application client that utilizes the backend JSON and renders the article as a webpage.
@@ -42,7 +42,7 @@ An explanation of how what each of these components are and how they showcase sp
 
 ## Write and publish an `npm` module in TypeScript which generates a JSON representation of linkbait articles
 
-TODO: Quick Node.js and npm explanation
+We've chosen to publish our project as an `npm` module because, according to [modulecounts.com](http://www.modulecounts.com/), it's the most popular JavaScript (and thus TypeScript) package management format. By using a widely-accepted format, we can ensure the core functionality of our project can be reused by other programmers.
 
 TypeScript language features to be used by the module:
 
@@ -50,7 +50,7 @@ TypeScript language features to be used by the module:
 - TODO
 - TODO
 
-## Write missing TypeScript type definition files for third-party `npm` module dependencies.
+## Write missing TypeScript type definition files for third-party `npm` modules that our `npm` module depends on.
 
 We plan on scraping the text content of existing websites in order to generate our own linkbait articles. This will require using the existing [pjscrape](https://github.com/nrabinowitz/pjscrape) JavaScript web scraping library. 
 
@@ -75,7 +75,11 @@ TODO: Explain and mention that `tscheck` is based on a paper https://cs.au.dk/~a
 
 # Project Value
 
-We've chosen to publish our project as an `npm` module because, according to [modulecounts.com](http://www.modulecounts.com/), it's the most popular JavaScript (and thus TypeScript) package management format. By using a widely-accepted format, we can ensure the core functionality of our project can be reused by other programmers.
+Of the most popular compile-to-JS languages, TypeScript greatly lags behind in adoption and has significantly fewer exemplary repositories to draw inspiration from. There are currently 8,267 TypeScript repositories on GitHub, compared with the 1.7 million JavaScript and 54,605 CoffeeScript (the leading compile-to-JS language that competes with TypeScript) repositories.
+
+Creating an additional TypeScript project provides future potential TypeScript programmers with an additional example of how they could utilize TypeScript's static typing features. 
+
+TODO: Add reference to research paper about how using a typed language increased productivity and make comment about how that adds value.
 
 # Project Importance
 
@@ -86,8 +90,6 @@ TODO: Write about the monetary value of link clicks, e.g. cost-per-click and web
 # Project Impact
 
 Standardized support for writing TypeScript `npm` modules that compile to JavaScript by using [tsconfig.json files](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json) to integrate with existing JavaScript and TypeScript `npm` modules has only been added [4 months ago in TypeScript 1.5](https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#typescript-15).
-
-Of the most popular compile-to-JS languages, TypeScript greatly lags behind in adoption and has significantly fewer exemplary repositories to draw inspiration from. There are currently 8,267 TypeScript repositories on GitHub, compared with the 1.7 million JavaScript and 54,605 CoffeeScript (the leading compile-to-JS language that competes with TypeScript) repositories.
 
 By publishing a library using this relatively-new build process, we are contributing to the TypeScript community by providing an additional working example of how to use this new build feature of the language, since there are only [678 results](https://github.com/search?l=typescript&q=tsconfig&type=Code&utf8=%E2%9C%93) when searching for GitHub code that use tsconfig.json files.
 
