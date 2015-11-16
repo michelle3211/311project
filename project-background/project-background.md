@@ -30,6 +30,8 @@ Email       normansue3@gmail.com
 
 # Project Overview
 
+>> show the respective language features
+
 >> describe, at a high level, a project on this topic that could satisfy the 100% level goals.
 
 >> Potential project—the one you'd do for the 100% level—is described in the context of the project topic. 
@@ -37,14 +39,11 @@ Email       normansue3@gmail.com
 # Project Value and Importance
 
 
->> value in everyday programming practice—an
+>> value in everyday programming practice
 
 >> you must base that description on existing work. How much? That will differ from project to project, but we'll try to quantify by saying "at least the equivalent of three CS conference research papers used suitably to support your description"
 
 >> perhaps because of industrial or research impact
-
-
-
 
 Ideas:
 
@@ -79,12 +78,14 @@ The most popular TypeScript repository is Google's Angular 2, but it's drawn cri
     double check with https://github.com/asgerf/tscheck
         based on paper by Google researcher https://cs.au.dk/~amoeller/papers/tscheck/paper.pdf
 
+- publishing npm modules written in TS using `tsconfig` is still a relatively new process, only added in TypeScript 1.5 (released July 14, 2015) with the latest examples only a few months old see http://stackoverflow.com/questions/30928253/writing-npm-modules-in-typescript
+    - our published project modules could be used as good examples for how to do this
+    - https://github.com/Microsoft/TypeScript/wiki/tsconfig.json
 
 # Relation to Existing Context
 
 >> relate your topic to its context (e.g., similar languages, analyses, semantic forms, or other projects and ideas). 
 >> Project topic is well-situated in its context (i.e., similar languages, analyses, or language features, depending on your topic).
-
 
 
 
@@ -106,3 +107,12 @@ The technical aspects you describe should include any needed for the project pro
 ### Possible refs
 
 https://users.soe.ucsc.edu/~abadi/Papers/FTS-submitted.pdf
+
+
+### Ideas for pivoting main project idea to better suit requirements
+
+- dynamic type discoverer
+- metaprogramming something
+- news article scraper with type checking
+
+
