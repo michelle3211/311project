@@ -1,6 +1,6 @@
-% Proposal: TypeScript Webapp -- Linkbait Article Generator
+% Proposal: TypeScript Webapp -- Linkbait Article Generator (Resubmission)
 % CPSC 311 Team T3
-% November 7, 2015
+% November 16, 2015
 
 Name:       Ashley Lee  
 Ugrad ID:   k7y8  
