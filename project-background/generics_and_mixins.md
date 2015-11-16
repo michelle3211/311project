@@ -46,5 +46,48 @@ function compare<T extends Comparable>(x: T, y: T): number {
 
 Mixins are a way of reusing code to make new classes by combining desired parts of existing classes without taking on all features of those classes. The specificity of which methods are retained avoids the problems from ambiguity that comes up in multiple inheritance otherwise.
 
-[Need to write something more than just the example in the reference handbook! (But not apparent that there's a simpler example.]
-https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Mixins.md
+Mixins do not have full native support in TypeScript so the following piece of code is required:
+```ts
+function applyMixins(derivedCtor: any, baseCtors: any[]) {
+    baseCtors.forEach(baseCtor => {
+        Object.getOwnPropertyNames(baseCtor.prototype).forEach(name => {
+            derivedCtor.prototype[name] = baseCtor.prototype[name];
+        });
+    });
+}
+```
+[ref: https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Mixins.md]
+
+When composing a class of mixins, we use `implements`, so these new classes are interfaces and use the types from the source classes, not their implementations. Therefore, the implementations must be provided in-class at runtime, and the compiler requires stand-in properties (with their types) to have this assurance. The above helper function takes the properties of each of the mixins and copies them to the target, substituting implementations where stand-in properties are encountered.
+
+This example from Fenton's _Pro TypeScript_ shows some classes whose behaviour we would like to reuse:
+```ts
+class Sings {
+    sing() {
+        console.log('Singing');
+    }
+}
+class Dances {
+    dance() {
+        console.log('Dancing');
+    }
+}
+class Acts {
+    act() {
+        console.log('Acting');
+    }
+}
+```
+Making the composite class from the mixins looks like this:
+```ts
+class AllRounder implements Acts, Dances, Sings {
+    act: () => void;
+    dance: () => void;  % types for the stand-in properties
+    sing: () => void;
+}
+```
+The helper function pulls all 3 classes behaviours together into the new `AllRounder` class, after which it can be used as any other class:
+```ts
+applyMixins(AllRounder, [Acts, Dances, Sings]);
+```
+A benefit of having stand-in properties in the new class is that any changes to the behaviour is restricted to one place: the source classes. This improves reusability and robustness of the code.
