@@ -82,9 +82,10 @@ Creating an additional TypeScript project provides future potential TypeScript p
 TODO: Add reference to research paper about how using a typed language increased productivity and make comment about how that adds value.
 
 # Project Importance
-
-TODO: Write about the monetary value of link clicks, e.g. cost-per-click and web advertisements, referral links, SEO, etc.
-
+Clickbait is a term for headlines that catch people's attention and curiosity enough for them to follow a link. The main goal is to make the user click through for advertisement revenue on websites. Secondary is the content, which has a reputation for being of very low quality. They exist due to a business model whereby the more visitors there are to a website, the more advertisers are willing to pay to use that site. Ads on that site gain more visibility with each visitor and can have further referral links. More visitors can also affect a site's rank when it shows up on search results. Therefore, any click-through on a link can have compounding effects on visibility and subsequently revenue from advertising.
+- negatives
+- possible positives
+- our goal
 
 
 # Project Impact
