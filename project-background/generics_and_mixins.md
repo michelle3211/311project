@@ -1,8 +1,8 @@
-# Generics (variables and functions)
+## Generics (variables and functions)
 
-Generics are a feature that allow reusability of code by giving capability to write components that are work for many types rather than a single specific one. TypeScript had generics introduced in version 0.9. One particular benefit of having generic types is so that TypeScript can reliably follow the expected behaviour of JavaScript libraries. [@1]
+Generics are a feature that allow reusability of code by giving capability to write components that are work for many types rather than a single specific one. TypeScript's genericswere introduced in version 0.9, a notable benefit being that TypeScript code can reliably follow the expected behaviour of JavaScript libraries. [@1]
 
-Allowing a range of types is shown in the simple example provided by Microsoft's TypeScript handbook available on GitHub:
+Allowing a range of types is shown in the simple example of an identity function provided by Microsoft's TypeScript handbook available on GitHub:
 
 ```ts
 function identity<T>(arg: T): T {
@@ -11,15 +11,14 @@ function identity<T>(arg: T): T {
 ```
 [@2]
 
-This is the identity function: the return value is exactly the value that was passed in. The `T` is a type variable whose value is determined based on what value is passed in. Then that `T` is used again as the return type. It is precise since it retains exactly the type that was passed in, and it works for multiple types, hence the above is considered a generic function.
+The `T` is a type variable whose value is determined based on what value is passed in. Then that `T` is used again as the return type. It is precise since it retains exactly the type that was passed in, and it works for multiple types, hence the above is considered a *generic function*. In the following example, the `T` itself is the generic.
 
-The `T` itself is the generic. As in
 ```ts
 var myArray = new Array<T>();
 ```
-Once a `T` has been specified, you need to continue using that particular type or else the compiler disallows it. Contrast this with JavaScript where an array can contain elements of different types. [@3]
+Once a `T` has been specified, you need to continue using that particular type, otherwise the compiler disallows it. Contrast this with JavaScript where an array can contain elements of different types. [@3]
 
-When calling a generic function in TypeScript. Either specify the type explicitly or let the compiler figure it out (this is called type argument inference). There can be cases when the compiler will not be able to figure it out and we will want to use the explicit method. Examples below based on the TypeScript handbook again.
+When calling a generic function in TypeScript, either specify the type explicitly or let the compiler determine it (this is called *type argument inference*). There can be cases when the compiler will not be able to figure it out and we will want to use the explicit method. Compare the two examples below (based on those from the TypeScript handbook).
 
 ```ts
 var output = identity<number>(1843);  // output will have type 'number', explicitly passed to the function
@@ -30,6 +29,8 @@ var output = identity(1843);  // output will have type 'number', compiler inspec
 ```
 
 In TypeScript, if a generic function is created, the compiler will enforce that all the actions taken in the function are used in such a way that they *could* work with all types. So if you attempt an operation that is only allowed for type `string` but not `number`, it will be forbidden (causes an error). But this is recognized only at compile time. There is no run-time representation for type parameters. [@1]
+
+In our web application, this feature may come in useful when quasi-randomly generating linkbait headlines. For example, we may want to construct a headline following the template: "You'll be shocked when you see [number: number] [string: plural noun] [string: verb]!" and different sub-phrases may be permuted to different ordering for variety. One way to make this would be to write a function that will concatenate sentence fragments no matter if they are strings or numbers.
 
 Generic parameters can be constrained by and get members of the supertypes. For example, by using `extends` in the following function, `x` and `y` are subtypes of Comparable (a generic function) and get a `compareTo` member:
 ```ts
@@ -42,7 +43,7 @@ function compare<T extends Comparable>(x: T, y: T): number {
 [@1 Section 6.5]
 
 
-# Mixins
+## Mixins
 
 Mixins are a way of reusing code to make new classes by combining desired parts of existing classes without taking on all features of those classes. The specificity of which methods are retained avoids the problems from ambiguity that comes up in multiple inheritance otherwise. They are useful in situations where a particular behaviour is repeated in many classes, providing optional behaviour in a class, and making variations on similar features in the augmented class. [@4]
 
@@ -93,6 +94,9 @@ applyMixins(AllRounder, [Acts, Dances, Sings]);
 A benefit of having stand-in properties in the augmented class is that any changes to the behaviour is restricted to one place: the source classes. This improves reusability and robustness of the code.[@5]
 
 One issue is that the mechanism behind adding implementation in `applyMixins` is not checked, so it is dependent on the programmer to ensure that it is called with the correct list of class names. A restriction to keep in mind is that mixins cannot be used with private members: since the member is not implemented in the augmented class, an error will be generated at compile time. [@4]
+
+In our application, we may want to source headline fragments collected from the web, or we could also ask the user to provide some content they'd like to see in their headline ('elephants' or '9002'). In the end, we want similar behaviour: a headline is produced. But there are slightly different or optional features (accepting user input for a partial headline). Mixins would work well here to reuse features, with options, and any updates to the code would be all in one place.
+
 
 **References**
 [@5]
