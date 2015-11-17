@@ -97,24 +97,19 @@ Clickbait (also known as linkbait) headlines may read like news, but the article
 
 We chose this as our application because it would be an amusing way to showcase the features of TypeScript. However, it could be extended to track data on which generated headlines are successful (number of click throughs and duration spent on target sites). This information could be used to learn how to best reach certain audiences with information. It could be anything from public health outreach to how undergrads can apply for co-op. Another possible benefit is that our team could sign up for ad revenue and make money for this project.
 
-**References for this section**
-
-[@333]
-"Saving Us From Ourselves: The Anti-Clickbait Movement." _Daily Beast_. Emily Shire. 14 Jul 2014. 16 Nov 2015. <http://www.thedailybeast.com/articles/2014/07/14/saving-us-from-ourselves-the-anti-clickbait-movement.html>
-
-[@334]
-"Clickbait: The changing face of online journalism." _BBC News_. Ben Frampton. 14 Sep 2015. 16 Nov 2015. <http://www.bbc.com/news/uk-wales-34213693>
-
 # Project Impact
 
 Standardized support for writing TypeScript `npm` modules that compile to JavaScript by using [tsconfig.json files](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json) to integrate with existing JavaScript and TypeScript `npm` modules has only been added [4 months ago in TypeScript 1.5](https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#typescript-15).
 
 By publishing a library using this relatively-new build process, we are contributing to the TypeScript community by providing an additional working example of how to use this new build feature of the language, since there are only [678 results](https://github.com/search?l=typescript&q=tsconfig&type=Code&utf8=%E2%9C%93) when searching for GitHub code that use tsconfig.json files.
 
+# Citations
 
+[@334]
+"Clickbait: The changing face of online journalism." _BBC News_. Ben Frampton. 14 Sep 2015. 16 Nov 2015. <http://www.bbc.com/news/uk-wales-34213693>
 
-
-
+[@333]
+"Saving Us From Ourselves: The Anti-Clickbait Movement." _Daily Beast_. Emily Shire. 14 Jul 2014. 16 Nov 2015. <http://www.thedailybeast.com/articles/2014/07/14/saving-us-from-ourselves-the-anti-clickbait-movement.html>
 
 
 
