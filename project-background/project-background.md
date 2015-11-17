@@ -53,9 +53,13 @@ maintain our code better than if we coded in JavaScript.
 
 ### Generics
 
+In TypeScript, if a generic function is created, the compiler will enforce that all the actions taken in the function are used in such a way that they *could* work with all types. So if you attempt an operation that is only allowed for type `String` but not `Object`, it will be forbidden (causes an error). But this is recognized only at compile time. There is no run-time representation for type parameters.
+
+Despite this, static-checking of the appropriate usage of generic types will be useful for when we iterate over possible articles in a `for... each` loop, to perform bulk formatting such as inserting abbreviations for our headlines.
+
 ### Mixins
 
-Mixins are a way of reusing code to make new classes by combining desired parts of existing classes without taking on all features of those classes. The specificity of which methods are retained avoids the problems from ambiguity that comes up in multiple inheritance otherwise. They are useful in situations where a particular behaviour is repeated in many classes, providing optional behaviour in a class, and making variations on similar features in the augmented class. [@4]
+Mixins are a way of reusing code to make new classes by combining desired parts of existing classes without taking on all features of those classes. The specificity of which methods are retained avoids the problems from ambiguity that comes up in multiple inheritance otherwise. They are useful in situations where a particular behaviour is repeated in many classes, providing optional behaviour in a class, and making variations on similar features in the augmented class. 
 
 ### Intersection Types
 
@@ -116,8 +120,12 @@ By publishing a library using this relatively-new build process, we are contribu
 
 # Citations
 
+Feldthaus, Asger. "Checking Correctness of TypeScript Interfaces for JavaScript Libraries" <https://cs.au.dk/~amoeller/papers/tscheck/paper.pdf>
+
 Frampton, Ben. "Clickbait: The changing face of online journalism." _BBC News_. 14 Sep 2015. 16 Nov 2015. <http://www.bbc.com/news/uk-wales-34213693>
 
 Shire, Emily. "Saving Us From Ourselves: The Anti-Clickbait Movement." _Daily Beast_. 14 Jul 2014. 16 Nov 2015. <http://www.thedailybeast.com/articles/2014/07/14/saving-us-from-ourselves-the-anti-clickbait-movement.html>
 
-Feldthaus, Asger. "Checking Correctness of TypeScript Interfaces for JavaScript Libraries" <https://cs.au.dk/~amoeller/papers/tscheck/paper.pdf>
+"TypeScript Handbook." _Microsoft_. 9 Nov. 2015. 12 Nov. 2015. <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Generics.md>, <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Mixins.md>
+
+"TypeScript: Language Specification." _Microsoft_. Feb 2015. 12 Nov. 2015. <http://www.typescriptlang.org/Content/TypeScript%20Language%20Specification.pdf>
