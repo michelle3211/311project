@@ -18,3 +18,8 @@ Think of different processes we could use to showcase our TypeScript features.
 7. Display new headline on our site
 8. optional next steps: make it into a clickable link to a true news story (warning: potential for something offensive generated)
 9. Alternative: User inputs part of the info, e.g. "8 things you never though would..." + (5)
+
+
+Oooh idea: start with a template:
+[random integer] [noun] "s that you won't believe will " [verb] [noun]
+That gives us some types... to check...? It's contrived, but it's something!
