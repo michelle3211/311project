@@ -55,6 +55,8 @@ After doing individual reading, we individually type up our findings in separate
 
 We'll include snippets of code executable TypeScript code to demonstrate our understanding of the language features that we're researching.
 
+Based on what we each learn of the above topics and with requirements for our web application in mind, we will further write up how some of the researched TypeScript features can be used to implement functionality for our app. There are a number of listed features that we could showcase as they are generally beneficial for most applications. For example, TypeScript functions support the binding the context `this`, contextual typing, and the ability for optional and default parameters. Specific to our application, we will be manipulating strings which may include numbers. In this case, we may want to take advantage of type checking to ensure that our generated linkbait headlines can be output properly. Likewise for any computations we may perform, we would want to ensure type safety to prevent errors. These are only preliminary examples as there are many possibilities.
+
 Starting point documents for our research:
 
 - Tutorial: [Learn TypeScript in Y Minutes](http://learnxinyminutes.com/docs/typescript/)
@@ -110,7 +112,7 @@ Tasks we will need to complete for the client-side implementation:
 
 - writing the HTML files (most likely with the help of a templating library such as [Jade](http://jade-lang.com/))
 - styling the HTML with CSS (most likely with a CSS framework such as [Twitter Bootstrap's CSS](http://getbootstrap.com/css/) or [Pure.css](http://purecss.io))
-- programming the dynamic interaction with the DOM elements using jQuery in conjuction with our modules written from the proof-of-concept
+- programming the dynamic interaction with the DOM elements using jQuery and Backbone.js to organize our data model for interaction with the HTML elements that will contain the rendered form of our server-side linkbait article JSON data
 
 All of our client-side code will be written using TypeScript.
 
