@@ -112,7 +112,7 @@ Tasks we will need to complete for the client-side implementation:
 
 - writing the HTML files (most likely with the help of a templating library such as [Jade](http://jade-lang.com/))
 - styling the HTML with CSS (most likely with a CSS framework such as [Twitter Bootstrap's CSS](http://getbootstrap.com/css/) or [Pure.css](http://purecss.io))
-- programming the dynamic interaction with the DOM elements using jQuery in conjuction with our modules written from the proof-of-concept
+- programming the dynamic interaction with the DOM elements using jQuery and Backbone.js to organize our data model for interaction with the HTML elements that will contain the rendered form of our server-side linkbait article JSON data
 
 All of our client-side code will be written using TypeScript.
 
