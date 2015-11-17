@@ -59,9 +59,11 @@ Mixins are a way of reusing code to make new classes by combining desired parts 
 
 ### Intersection Types
 
-By using the `pjscrape` web scraping library, we will collect an `Array`
-- TODO
-- TODO
+By using the `pjscrape` web scraping library, we will collect an `Array` of parsed data from other popular articles, which will ensure that our generated articles' headlines will have a high chance of being clicked on.
+
+However, the types of the objects within the collected `Array` data will be unknown ahead of time, aside from the fact that they could be a mathematical union of a discrete number of types. TypeScript's intersection types feature allows us to statically check that our subsequent functions use the parsed `Array` elements in a way that's consistent with JavaScript's built-in methods on native library types. For example, we can only call `String.prototype.concat` on `String` types, but the elements may be both `String` and `Number` types, since some of the articles we parse may contain numeric data. 
+
+If we were to write our subsequent data cleaning code without the usage of TypeScript's static type checking features, it may result in JavaScript `TypeError`s.
 
 ## Write missing TypeScript type definition files for third-party `npm` modules that our `npm` module depends on.
 
@@ -100,7 +102,7 @@ Clickbait is a term for headlines that catch people's attention and curiosity en
 
 ## Negatives and possible positive side-effects
 
-Clickbait (also known as linkbait) headlines may read like news, but the articles are often hastily created with little research, no insight, misleading information, or they can be outright advertisements masquerading as impartial articles. It can annoy consumers [@333] and it can also affect the way content is created, encouraging poor journalism [@334]. So, there is little _inherent_ value to creating clickbait. However, we may gain some beneficial knowledge as a byproduct. Creating successful clickbait involves the psychology of curiosity and persuasion. If we can learn more about what works, we can put it to good use (without annoying the readership) by providing high quality content at the target site. For example, actual information.
+Clickbait (also known as linkbait) headlines may read like news, but the articles are often hastily created with little research, no insight, misleading information, or they can be outright advertisements masquerading as impartial articles. It can annoy consumers (Frampton, 2015) and it can also affect the way content is created, encouraging poor journalism (Shure, 2014). So, there is little _inherent_ value to creating clickbait. However, we may gain some beneficial knowledge as a byproduct. Creating successful clickbait involves the psychology of curiosity and persuasion. If we can learn more about what works, we can put it to good use (without annoying the readership) by providing high quality content at the target site. For example, actual information.
 
 ## Our perspective
 
@@ -114,22 +116,8 @@ By publishing a library using this relatively-new build process, we are contribu
 
 # Citations
 
-[@334]
-"Clickbait: The changing face of online journalism." _BBC News_. Ben Frampton. 14 Sep 2015. 16 Nov 2015. <http://www.bbc.com/news/uk-wales-34213693>
+Frampton, Ben. "Clickbait: The changing face of online journalism." _BBC News_. 14 Sep 2015. 16 Nov 2015. <http://www.bbc.com/news/uk-wales-34213693>
 
-[@333]
-"Saving Us From Ourselves: The Anti-Clickbait Movement." _Daily Beast_. Emily Shire. 14 Jul 2014. 16 Nov 2015. <http://www.thedailybeast.com/articles/2014/07/14/saving-us-from-ourselves-the-anti-clickbait-movement.html>
+Shire, Emily. "Saving Us From Ourselves: The Anti-Clickbait Movement." _Daily Beast_. 14 Jul 2014. 16 Nov 2015. <http://www.thedailybeast.com/articles/2014/07/14/saving-us-from-ourselves-the-anti-clickbait-movement.html>
 
-
-
-
-
-
-
-
-
-
-https://cs.au.dk/~amoeller/papers/tscheck/paper.pdf
-
-
-
+Feldthaus, Asger. "Checking Correctness of TypeScript Interfaces for JavaScript Libraries" <https://cs.au.dk/~amoeller/papers/tscheck/paper.pdf>
