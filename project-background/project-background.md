@@ -83,8 +83,6 @@ Of the most popular compile-to-JS languages, TypeScript greatly lags behind in a
 
 Creating an additional TypeScript project provides future potential TypeScript programmers with an additional example of how they could utilize TypeScript's static typing features. 
 
-TODO: Add reference to research paper about how using a typed language increased productivity and make comment about how that adds value.
-
 # Project Importance
 
 ## Background
