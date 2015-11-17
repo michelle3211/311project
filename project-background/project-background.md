@@ -56,19 +56,19 @@ maintain our code better than if we coded in JavaScript.
 
 ## Write missing TypeScript type definition files for third-party `npm` modules that our `npm` module depends on.
 
-We plan on scraping the text content of existing websites in order to generate our own linkbait articles. This will require using the existing [pjscrape](https://github.com/nrabinowitz/pjscrape) JavaScript web scraping library. 
+We plan on scraping the text content of existing websites in order to generate our own linkbait articles. This will require using the existing [pjscrape](https://github.com/nrabinowitz/pjscrape) JavaScript web scraping library. `pjscrape` currently does not have TypeScript type definitions within the [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) repository, so we'll need to inspect their `export`ed functions and write `module` and `interface` definitions for each of them.
 
 ## Verify that all of our written TypeScript type definition files are bugfree with [tscheck](https://github.com/asgerf/tscheck).
 
-`tscheck` is an existing JavaScript library based on research by Feldthaus and Møller that can be used to find bugs in handwritten TypeScript type definition files. Running this check ensures that the `module` and `interface` definitions that we need to write for `pjscrape` (and any other required `npm` modules currently lacking type definitions) are correct, such that when our code calls their functions, TypeScript's `tsc` compiler will correctly perform static type checking.
+`tscheck` is an existing JavaScript library based on research by Feldthaus and Møller that can be used to find bugs in handwritten TypeScript type definition files. Running this check ensures that the `module` and `interface` definitions that we need to write for the required `npm` modules (e.g. `pjscrape`) are bugfree, such that when our code calls their functions, TypeScript's `tsc` compiler will correctly perform static type checking.
 
+## Use our `npm` module to create a simple Node.js + Express API server that runs the web scraper module and sends the resulting JSON articles to the browser client.
 
-## Use our `npm` module to create a simple Node.js+Express API server that runs the web scraper module and sends the resulting JSON articles to the browser client.
-
+[Express.js](http://expressjs.com/) is the most commonly used Node.js library for creating minimalistic API servers. We will use it to serve the HTML, CSS and compiled JavaScript browser client.
 
 ## Write a TypeScript single-page application browser client that renders the calculated backend JSON API data with jQuery and Backbone.js.
 
-
+Our browser client will use [Backbone.js](http://backbonejs.org/), one of the popular client-side JavaScript frameworks for providing structure to the registration of jQuery callback functions to the various DOM elements that we'll use to render our API's JSON data containing the generated linkbait articles.
 
 
 
