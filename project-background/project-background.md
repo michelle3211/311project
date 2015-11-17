@@ -42,11 +42,11 @@ An explanation of how what each of these components are and how they showcase sp
 
 ## Write and publish an `npm` module in TypeScript which generates a JSON representation of linkbait articles by taking advantage of type checking.
 
-We've chosen to publish our project as an `npm` module because, according to [modulecounts.com](http://www.modulecounts.com/), it's the most popular JavaScript (and thus TypeScript) package management format. By using a widely-accepted format, we can ensure the core functionality of our project can be reused by other programmers.
+We've chosen to publish our project as an `npm` module because, according to [modulecounts.com](http://www.modulecounts.com/), it's the industry-standard JavaScript (and thus TypeScript) package management format for running code on [Node.js](https://nodejs.org/en/), the JavaScript runtime environment that allows our compiled TypeScript code to be executed server-side. By using a widely-accepted, industry-standard library format, we can ensure the core functionality of our project can be reused by other programmers.
 
-TypeScript language features to be used by the module:
+Specific TypeScript language features to be used by the module include:
 
-Functions:
+### Functions
 
 As TypeScript is a superscript of JavaScript, there are similarities between them, however, when writing the former, there are differences that will compile into the latter. These differences may give flexibility in writing functions. Undoubtedly, when coding our linkbait article generator, we're going to end up using functions to represent the behavior of the generator, while probably encapsulating those in classes. TypeScript has added functionality to functions that JavaScript does not, such as binding the context of 'this', contextual typing, and the ability for optional and default parameters. These capabilities make it easier to code and maintain a typed program, which will help us 
 maintain our code better than if we coded in JavaScript. 
