@@ -32,11 +32,11 @@ Email       normansue3@gmail.com
 
 For the 100%-level milestone, we would complete the following:
 
-1. Write and publish an `npm` module in TypeScript which generates a JSON representation of linkbait articles.
+1. Write and publish an `npm` module in TypeScript which generates a JSON representation of linkbait articles by taking advantage of type checking.
 2. Write missing TypeScript type definition files for third-party `npm` modules that our `npm` module depends on.
 3. Verify that all of our written TypeScript type definition files are bugfree with [tscheck](https://github.com/asgerf/tscheck).
-4. Use our `npm` module to create a simple Node.js+Express API server that runs the web scraper code and sends the resulting JSON articles to the browser client.
-5. Write a TypeScript single-page application client that utilizes the backend JSON and renders the article as a webpage.
+4. Use our `npm` module to create a simple Node.js+Express API server that runs the web scraper module and sends the resulting JSON articles to the browser client.
+5. Write a TypeScript single-page application browser client that renders the calculated backend JSON API data with jQuery and Backbone.js.
 
 An explanation of how what each of these components are and how they showcase specific TypeScript language features is given in the following subsections.
 
