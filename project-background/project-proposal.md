@@ -55,6 +55,8 @@ After doing individual reading, we individually type up our findings in separate
 
 We'll include snippets of code executable TypeScript code to demonstrate our understanding of the language features that we're researching.
 
+Based on what we each learn of the above topics and with requirements for our web application in mind, we will further write up how some of the researched TypeScript features can be used to implement functionality for our app. There are a number of listed features that we could showcase as they are generally beneficial for most applications. For example, TypeScript functions support the binding the context `this`, contextual typing, and the ability for optional and default parameters. Specific to our application, we will be manipulating strings which may include numbers. In this case, we may want to take advantage of type checking to ensure that our generated linkbait headlines can be output properly. Likewise for any computations we may perform, we would want to ensure type safety to prevent errors. These are only preliminary examples as there are many possibilities.
+
 Starting point documents for our research:
 
 - Tutorial: [Learn TypeScript in Y Minutes](http://learnxinyminutes.com/docs/typescript/)
