@@ -51,6 +51,15 @@ Specific TypeScript language features to be used by the module include:
 As TypeScript is a superscript of JavaScript, there are similarities between them, however, when writing the former, there are differences that will compile into the latter. These differences may give flexibility in writing functions. Undoubtedly, when coding our linkbait article generator, we're going to end up using functions to represent the behavior of the generator, while probably encapsulating those in classes. TypeScript has added functionality to functions that JavaScript does not, such as binding the context of 'this', contextual typing, and the ability for optional and default parameters. These capabilities make it easier to code and maintain a typed program, which will help us 
 maintain our code better than if we coded in JavaScript. 
 
+### Generics
+
+### Mixins
+
+Mixins are a way of reusing code to make new classes by combining desired parts of existing classes without taking on all features of those classes. The specificity of which methods are retained avoids the problems from ambiguity that comes up in multiple inheritance otherwise. They are useful in situations where a particular behaviour is repeated in many classes, providing optional behaviour in a class, and making variations on similar features in the augmented class. [@4]
+
+### Intersection Types
+
+By using the `pjscrape` web scraping library, we will collect an `Array`
 - TODO
 - TODO
 
