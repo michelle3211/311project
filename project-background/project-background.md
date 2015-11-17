@@ -40,7 +40,7 @@ For the 100%-level milestone, we would complete the following:
 
 An explanation of how what each of these components are and how they showcase specific TypeScript language features is given in the following subsections.
 
-## Write and publish an `npm` module in TypeScript which generates a JSON representation of linkbait articles
+## Write and publish an `npm` module in TypeScript which generates a JSON representation of linkbait articles by taking advantage of type checking.
 
 We've chosen to publish our project as an `npm` module because, according to [modulecounts.com](http://www.modulecounts.com/), it's the most popular JavaScript (and thus TypeScript) package management format. By using a widely-accepted format, we can ensure the core functionality of our project can be reused by other programmers.
 
@@ -61,12 +61,14 @@ We plan on scraping the text content of existing websites in order to generate o
 TODO: Explain and mention that `tscheck` is based on a paper https://cs.au.dk/~amoeller/papers/tscheck/paper.pdf
 
 ## Verify that all of our written TypeScript type definition files are bugfree with [tscheck](https://github.com/asgerf/tscheck).
+## Verify that all of our written TypeScript type definition files are bugfree with [tscheck](https://github.com/asgerf/tscheck).
 
 
+## Use our `npm` module to create a simple Node.js+Express API server that runs the web scraper module and sends the resulting JSON articles to the browser client.
 ## Use our `npm` module to create a simple Node.js+Express API server that runs the web scraper code and sends the resulting JSON articles to the browser client.
 
 
-## Write a TypeScript single-page application client that utilizes the backend JSON and renders the article as a webpage.
+## Write a TypeScript single-page application browser client that renders the calculated backend JSON API data with jQuery and Backbone.js.
 
 
 
