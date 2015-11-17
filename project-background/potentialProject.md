@@ -21,5 +21,12 @@ Think of different processes we could use to showcase our TypeScript features.
 
 
 Oooh idea: start with a template:
+
 [random integer] [noun] "s that you won't believe will " [verb] [noun]
+
 That gives us some types... to check...? It's contrived, but it's something!
+
+
+Or start even easier, create a type for [TV show] and populate the list of possibilities ourselves just for proof of concept:
+
+"Which character from " [TV show] " are you? Take this quiz!"
