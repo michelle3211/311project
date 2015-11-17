@@ -58,14 +58,12 @@ maintain our code better than if we coded in JavaScript.
 
 We plan on scraping the text content of existing websites in order to generate our own linkbait articles. This will require using the existing [pjscrape](https://github.com/nrabinowitz/pjscrape) JavaScript web scraping library. 
 
-TODO: Explain and mention that `tscheck` is based on a paper https://cs.au.dk/~amoeller/papers/tscheck/paper.pdf
+## Verify that all of our written TypeScript type definition files are bugfree with [tscheck](https://github.com/asgerf/tscheck).
 
-## Verify that all of our written TypeScript type definition files are bugfree with [tscheck](https://github.com/asgerf/tscheck).
-## Verify that all of our written TypeScript type definition files are bugfree with [tscheck](https://github.com/asgerf/tscheck).
+`tscheck` is an existing JavaScript library based on research by Feldthaus and Møller that can be used to find bugs in handwritten TypeScript type definition files. Running this check ensures that the `module` and `interface` definitions that we need to write for `pjscrape` (and any other required `npm` modules currently lacking type definitions) are correct, such that when our code calls their functions, TypeScript's `tsc` compiler will correctly perform static type checking.
 
 
 ## Use our `npm` module to create a simple Node.js+Express API server that runs the web scraper module and sends the resulting JSON articles to the browser client.
-## Use our `npm` module to create a simple Node.js+Express API server that runs the web scraper code and sends the resulting JSON articles to the browser client.
 
 
 ## Write a TypeScript single-page application browser client that renders the calculated backend JSON API data with jQuery and Backbone.js.
@@ -124,6 +122,8 @@ By publishing a library using this relatively-new build process, we are contribu
 
 
 
+
+https://cs.au.dk/~amoeller/papers/tscheck/paper.pdf
 
 
 
