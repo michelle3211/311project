@@ -1,6 +1,6 @@
 % Background Report: TypeScript Webapp -- Linkbait Article Generator
 % CPSC 311 Team T3
-% November 16, 2015
+% November 27, 2015
 
 Name:       Ashley Lee  
 Ugrad ID:   k7y8  
