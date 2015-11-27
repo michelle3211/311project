@@ -129,7 +129,7 @@ By publishing a library using this relatively-new build process, we are contribu
 <a name="ref3c"/>[3c] <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Mixins.md>
 
 [4] "What's new in TypesScript." _Microsoft_. 13 Nov 2015. 16 Nov 2015.
-<a name="ref4a"/>[4a] <https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#intersection-types>
+<a name="ref4a"/>[4a] <https://github.com/Microsoft/TypeScript/wiki/What\'s-new-in-TypeScript#intersection-types>
 
 <a name="ref5"/>[5] Rabinowitz, Nick. "[nrabinowitz/pjscrape (Git code repo)](https://github.com/nrabinowitz/pjscrape)." 23 May 2014. 16 Nov 2015.
 
