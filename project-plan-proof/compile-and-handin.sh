@@ -10,6 +10,7 @@ SUBMISSION=${PWD##*/} # Current folder name
 RESUBMISSION=project-background-report
 
 PANDOC_CMD=/usr/local/bin/pandoc
+PANDOC_INPUT_FORMAT=markdown+header_attributes+citations+shortcut_reference_links
 
 if [ -f $PANDOC_CMD ]; then
     echo "compiling Markdown to PDF"
@@ -20,6 +21,7 @@ if [ -f $PANDOC_CMD ]; then
       -V geometry:right=2.5cm \
       -V geometry:top=2.5cm \
       -V geometry:bottom=2.5cm \
+      -f $PANDOC_INPUT_FORMAT \
       ./$RESUBMISSION.md -o ./$RESUBMISSION.pdf
 else
     echo "$PANDOC_CMD not found; not compiling Markdown to PDF"
