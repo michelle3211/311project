@@ -42,36 +42,36 @@ An explanation of how what each of these components are and how they showcase sp
 
 ## Write and publish an `npm` module in TypeScript which generates a JSON representation of linkbait articles by taking advantage of type checking.
 
-We've chosen to publish our project as an `npm` module because, according to [modulecounts.com](http://www.modulecounts.com/), it's the industry-standard JavaScript (and thus TypeScript) package management format for running code on [Node.js](https://nodejs.org/en/), the JavaScript runtime environment that allows our compiled TypeScript code to be executed server-side. By using a widely-accepted, industry-standard library format, we can ensure the core functionality of our project can be reused by other programmers.
+We've chosen to publish our project as an `npm` module because, according to [modulecounts.com](http://www.modulecounts.com/)[[2]](#ref2), it's the industry-standard JavaScript (and thus TypeScript) package management format for running code on [Node.js](https://nodejs.org/en/), the JavaScript runtime environment that allows our compiled TypeScript code to be executed server-side. By using a widely-accepted, industry-standard library format, we can ensure the core functionality of our project can be reused by other programmers.
 
 Specific TypeScript language features to be used by the module include:
 
 ### Functions
 
-As TypeScript is a superscript of JavaScript, there are similarities between them, however, when writing the former, there are differences that will compile into the latter. These differences may give flexibility in writing functions. Undoubtedly, when coding our linkbait article generator, we're going to end up using functions to represent the behavior of the generator, while probably encapsulating those in classes. TypeScript has added functionality to functions that JavaScript does not, such as binding the context of 'this', contextual typing, and the ability for optional and default parameters. These capabilities make it easier to code and maintain a typed program, which will help us 
+As TypeScript is a superscript of JavaScript, there are similarities between them, however, when writing the former, there are differences that will compile into the latter. These differences may give flexibility in writing functions. Undoubtedly, when coding our linkbait article generator, we're going to end up using functions to represent the behavior of the generator, while probably encapsulating those in classes. TypeScript has added functionality to functions that JavaScript does not, such as binding the context of 'this', contextual typing, and the ability for optional and default parameters. [[3a]](#ref3a) These capabilities make it easier to code and maintain a typed program, which will help us 
 maintain our code better than if we coded in JavaScript. 
 
 ### Generics
 
-In TypeScript, if a generic function is created, the compiler will enforce that all the actions taken in the function are used in such a way that they *could* work with all types. So if you attempt an operation that is only allowed for type `String` but not `Object`, it will be forbidden (causes an error). But this is recognized only at compile time. There is no run-time representation for type parameters.
+In TypeScript, if a generic function is created, the compiler will enforce that all the actions taken in the function are used in such a way that they *could* work with all types. So if you attempt an operation that is only allowed for type `String` but not `Object`, it will be forbidden (causes an error). But this is recognized only at compile time. There is no run-time representation for type parameters. [[3b]](#ref3b)
 
 Despite this, static-checking of the appropriate usage of generic types will be useful for when we iterate over possible articles in a `for... each` loop, to perform bulk formatting such as inserting abbreviations for our headlines.
 
 ### Mixins
 
-Mixins are a way of reusing code to make new classes by combining desired parts of existing classes without taking on all features of those classes. The specificity of which methods are retained avoids the problems from ambiguity that comes up in multiple inheritance otherwise. They are useful in situations where a particular behaviour is repeated in many classes, providing optional behaviour in a class, and making variations on similar features in the augmented class. 
+Mixins are a way of reusing code to make new classes by combining desired parts of existing classes without taking on all features of those classes. The specificity of which methods are retained avoids the problems from ambiguity that comes up in multiple inheritance otherwise. They are useful in situations where a particular behaviour is repeated in many classes, providing optional behaviour in a class, and making variations on similar features in the augmented class. [[3c]](#ref3c)
 
 ### Intersection Types
 
 By using the `pjscrape` web scraping library, we will collect an `Array` of parsed data from other popular articles, which will ensure that our generated articles' headlines will have a high chance of being clicked on.
 
-However, the types of the objects within the collected `Array` data will be unknown ahead of time, aside from the fact that they could be a mathematical union of a discrete number of types. TypeScript's intersection types feature allows us to statically check that our subsequent functions use the parsed `Array` elements in a way that's consistent with JavaScript's built-in methods on native library types. For example, we can only call `String.prototype.concat` on `String` types, but the elements may be both `String` and `Number` types, since some of the articles we parse may contain numeric data. 
+However, the types of the objects within the collected `Array` data will be unknown ahead of time, aside from the fact that they could be a mathematical union of a discrete number of types. TypeScript's intersection types feature [[4a]](#ref4a) allows us to statically check that our subsequent functions use the parsed `Array` elements in a way that's consistent with JavaScript's built-in methods on native library types. For example, we can only call `String.prototype.concat` on `String` types, but the elements may be both `String` and `Number` types, since some of the articles we parse may contain numeric data. 
 
 If we were to write our subsequent data cleaning code without the usage of TypeScript's static type checking features, it may result in JavaScript `TypeError`s.
 
 ## Write missing TypeScript type definition files for third-party `npm` modules that our `npm` module depends on.
 
-We plan on scraping the text content of existing websites in order to generate our own linkbait articles. This will require using the existing [pjscrape](https://github.com/nrabinowitz/pjscrape) JavaScript web scraping library. `pjscrape` currently does not have TypeScript type definitions within the [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) repository, so we'll need to inspect their `export`ed functions and write `module` and `interface` definitions for each of them.
+We plan on scraping the text content of existing websites in order to generate our own linkbait articles. This will require using the existing [pjscrape](https://github.com/nrabinowitz/pjscrape)[[5]](#ref5) JavaScript web scraping library. `pjscrape` currently does not have TypeScript type definitions within the [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) repository, so we'll need to inspect their `export`ed functions and write `module` and `interface` definitions for each of them.
 
 ## Verify that all of our written TypeScript type definition files are bugfree with [tscheck](https://github.com/asgerf/tscheck).
 
@@ -119,7 +119,19 @@ Standardized support for writing TypeScript `npm` modules that compile to JavaSc
 By publishing a library using this relatively-new build process, we are contributing to the TypeScript community by providing an additional working example of how to use this new build feature of the language, since there are only [678 results](https://github.com/search?l=typescript&q=tsconfig&type=Code&utf8=%E2%9C%93) when searching for GitHub code that use tsconfig.json files.
 
 # Citations
-<a name="ref1"/>[1] Feldthaus, Asger. "[asgerf/tscheck (Git repo)](https://github.com/asgerf/tscheck)." 15 Aug 2014. 16 Nov 2015.
+<a name="ref1"/>[1] Feldthaus, Asger. "[asgerf/tscheck (Git code repo)](https://github.com/asgerf/tscheck)." 15 Aug 2014. 16 Nov 2015.
+
+<a name="ref2"/>[2] [modulecounts.com](http://www.modulecounts.com/) 16 Nov 2015 (data updated daily).
+
+[3] "TypeScript Handbook." _Microsoft_. 9 Nov. 2015. 12 Nov. 2015.  
+<a name="ref3a"/>[3a] <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Functions.md#lambdas-and-using-this>,
+<a name="ref3b"/>[3b] <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Generics.md>,
+<a name="ref3c"/>[3c] <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Mixins.md>
+
+[4] "What's new in TypesScript." _Microsoft_. 13 Nov 2015. 16 Nov 2015.
+<a name="ref4a"/>[4a] <https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#intersection-types>
+
+<a name="ref5"/>[5] Rabinowitz, Nick. "[nrabinowitz/pjscrape (Git code repo)](https://github.com/nrabinowitz/pjscrape)." 23 May 2014. 16 Nov 2015.
 
 Feldthaus, Asger. "Checking Correctness of TypeScript Interfaces for JavaScript Libraries" <https://cs.au.dk/~amoeller/papers/tscheck/paper.pdf>
 
@@ -127,6 +139,6 @@ Frampton, Ben. "Clickbait: The changing face of online journalism." _BBC News_. 
 
 Shire, Emily. "Saving Us From Ourselves: The Anti-Clickbait Movement." _Daily Beast_. 14 Jul 2014. 16 Nov 2015. <http://www.thedailybeast.com/articles/2014/07/14/saving-us-from-ourselves-the-anti-clickbait-movement.html>
 
-"TypeScript Handbook." _Microsoft_. 9 Nov. 2015. 12 Nov. 2015. <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Generics.md>, <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Mixins.md>
+
 
 "TypeScript: Language Specification." _Microsoft_. Feb 2015. 12 Nov. 2015. <http://www.typescriptlang.org/Content/TypeScript%20Language%20Specification.pdf>
