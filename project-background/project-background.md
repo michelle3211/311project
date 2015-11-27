@@ -53,7 +53,7 @@ maintain our code better than if we coded in JavaScript.
 
 ### Generics
 
-In TypeScript, if a generic function is created, the compiler will enforce that all the actions taken in the function are used in such a way that they *could* work with all types. So if you attempt an operation that is only allowed for type `String` but not `Object`, it will be forbidden (causes an error). But this is recognized only at compile time. There is no run-time representation for type parameters. [[3b]](#ref3b)
+In TypeScript, if a generic function is created, the compiler will enforce that all the actions taken in the function are used in such a way that they *could* work with all types. So if you attempt an operation that is only allowed for type `String` but not `Object`, it will be forbidden (causes an error).[[3b]](#ref3b) But this is recognized only at compile time. There is no run-time representation for type parameters.[[3bi]](#ref3bi)
 
 Despite this, static-checking of the appropriate usage of generic types will be useful for when we iterate over possible articles in a `for... each` loop, to perform bulk formatting such as inserting abbreviations for our headlines.
 
@@ -71,11 +71,11 @@ If we were to write our subsequent data cleaning code without the usage of TypeS
 
 ## Write missing TypeScript type definition files for third-party `npm` modules that our `npm` module depends on.
 
-We plan on scraping the text content of existing websites in order to generate our own linkbait articles. This will require using the existing [pjscrape](https://github.com/nrabinowitz/pjscrape)[[5]](#ref5) JavaScript web scraping library. `pjscrape` currently does not have TypeScript type definitions within the [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) repository, so we'll need to inspect their `export`ed functions and write `module` and `interface` definitions for each of them.
+We plan on scraping the text content of existing websites in order to generate our own linkbait articles. This will require using the existing [pjscrape](https://github.com/nrabinowitz/pjscrape)[[5]](#ref5) JavaScript web scraping library. `pjscrape` currently does not have TypeScript type definitions within the [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)[[6]](#ref6) repository, so we'll need to inspect their `export`ed functions and write `module` and `interface` definitions for each of them.
 
 ## Verify that all of our written TypeScript type definition files are bugfree with [tscheck](https://github.com/asgerf/tscheck).
 
-`tscheck` is an existing JavaScript library based on research by Feldthaus and Møller that can be used to find bugs in handwritten TypeScript type definition files. Running this check ensures that the `module` and `interface` definitions that we need to write for the required `npm` modules (e.g. `pjscrape`) are bugfree, such that when our code calls their functions, TypeScript's `tsc` compiler will correctly perform static type checking.
+`tscheck` is an existing JavaScript library based on research by Feldthaus and Møller that can be used to find bugs in handwritten TypeScript type definition files. Running this check ensures that the `module` and `interface` definitions that we need to write for the required `npm` modules (e.g. `pjscrape`) are bugfree, such that when our code calls their functions, TypeScript's `tsc` compiler will correctly perform static type checking. [[1]](#ref1),[[7]](#ref7)
 
 ## Use our `npm` module to create a simple Node.js + Express API server that runs the web scraper module and sends the resulting JSON articles to the browser client.
 
@@ -84,12 +84,6 @@ We plan on scraping the text content of existing websites in order to generate o
 ## Write a TypeScript single-page application browser client that renders the calculated backend JSON API data with jQuery and Backbone.js.
 
 Our browser client will use [Backbone.js](http://backbonejs.org/), one of the popular client-side JavaScript frameworks for providing structure to the registration of jQuery callback functions to the various DOM elements that we'll use to render our API's JSON data containing the generated linkbait articles.
-
-
-
-
-
-
 
 
 # Project Value
@@ -106,7 +100,7 @@ Clickbait is a term for headlines that catch people's attention and curiosity en
 
 ## Negatives and possible positive side-effects
 
-Clickbait (also known as linkbait) headlines may read like news, but the articles are often hastily created with little research, no insight, misleading information, or they can be outright advertisements masquerading as impartial articles. It can annoy consumers (Frampton, 2015) and it can also affect the way content is created, encouraging poor journalism (Shure, 2014). So, there is little _inherent_ value to creating clickbait. However, we may gain some beneficial knowledge as a byproduct. Creating successful clickbait involves the psychology of curiosity and persuasion. If we can learn more about what works, we can put it to good use (without annoying the readership) by providing high quality content at the target site. For example, actual information.
+Clickbait (also known as linkbait) headlines may read like news, but the articles are often hastily created with little research, no insight, misleading information, or they can be outright advertisements masquerading as impartial articles. It can annoy consumers [[8]](#ref8) and it can also affect the way content is created, encouraging poor journalism [[9]](#ref9). So, there is little _inherent_ value to creating clickbait. However, we may gain some beneficial knowledge as a byproduct. Creating successful clickbait involves the psychology of curiosity and persuasion. If we can learn more about what works, we can put it to good use (without annoying the readership) by providing high quality content at the target site. For example, actual information.
 
 ## Our perspective
 
@@ -114,31 +108,34 @@ We chose this as our application because it would be an amusing way to showcase 
 
 # Project Impact
 
-Standardized support for writing TypeScript `npm` modules that compile to JavaScript by using [tsconfig.json files](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json) to integrate with existing JavaScript and TypeScript `npm` modules has only been added [4 months ago in TypeScript 1.5](https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#typescript-15).
+Standardized support for writing TypeScript `npm` modules that compile to JavaScript by using [tsconfig.json files](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json) to integrate with existing JavaScript and TypeScript `npm` modules has only been added 4 months ago in TypeScript 1.5. [[4b]](#ref4b)
 
-By publishing a library using this relatively-new build process, we are contributing to the TypeScript community by providing an additional working example of how to use this new build feature of the language, since there are only [678 results](https://github.com/search?l=typescript&q=tsconfig&type=Code&utf8=%E2%9C%93) when searching for GitHub code that use tsconfig.json files.
+By publishing a library using this relatively-new build process, we are contributing to the TypeScript community by providing an additional working example of how to use this new build feature of the language, since there are only 678 results [[10]](#ref10) when searching for GitHub code that use tsconfig.json files.
 
 # Citations
-<a name="ref1"/>[1] Feldthaus, Asger. "[asgerf/tscheck (Git code repo)](https://github.com/asgerf/tscheck)." 15 Aug 2014. 16 Nov 2015.
+<a name="ref1"/>[1] Feldthaus, Asger. "asgerf/tscheck (Git code repo)." 15 Aug 2014. 16 Nov 2015. <https://github.com/asgerf/tscheck>
 
-<a name="ref2"/>[2] [modulecounts.com](http://www.modulecounts.com/) 16 Nov 2015 (data updated daily).
+<a name="ref2"/>[2] DeBill, Erik. "Module Counts." 16 Nov 2015 (data updated daily). <http://www.modulecounts.com/>
 
 [3] "TypeScript Handbook." _Microsoft_. 9 Nov. 2015. 12 Nov. 2015.  
 <a name="ref3a"/>[3a] <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Functions.md#lambdas-and-using-this>,
 <a name="ref3b"/>[3b] <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Generics.md>,
 <a name="ref3c"/>[3c] <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Mixins.md>
 
+<a name="ref3bi"/>[3bi] "TypeScript: Language Specification." _Microsoft_. Feb 2015. 12 Nov. 2015. <http://www.typescriptlang.org/Content/TypeScript%20Language%20Specification.pdf>
+
 [4] "What's new in TypesScript." _Microsoft_. 13 Nov 2015. 16 Nov 2015.
-<a name="ref4a"/>[4a] <https://github.com/Microsoft/TypeScript/wiki/What\'s-new-in-TypeScript#intersection-types>
+<a name="ref4a"/>[4a] <https://github.com/Microsoft/TypeScript/wiki/What\'s-new-in-TypeScript#intersection-types>,
+<a name="ref4b"/>[4b] <https://github.com/Microsoft/TypeScript/wiki/What\'s-new-in-TypeScript#typescript-15>
 
-<a name="ref5"/>[5] Rabinowitz, Nick. "[nrabinowitz/pjscrape (Git code repo)](https://github.com/nrabinowitz/pjscrape)." 23 May 2014. 16 Nov 2015.
+<a name="ref5"/>[5] Rabinowitz, Nick. "nrabinowitz/pjscrape (Git code repo)." 23 May 2014. 16 Nov 2015. <https://github.com/nrabinowitz/pjscrape>
 
-Feldthaus, Asger. "Checking Correctness of TypeScript Interfaces for JavaScript Libraries" <https://cs.au.dk/~amoeller/papers/tscheck/paper.pdf>
+<a name="ref6"/>[6] "DefinitelyTyped: The repository for high quality TypeScript type definitions." 23 May 2014. 16 Nov 2015. <https://github.com/DefinitelyTyped/DefinitelyTyped> also <http://definitelytyped.org/>
 
-Frampton, Ben. "Clickbait: The changing face of online journalism." _BBC News_. 14 Sep 2015. 16 Nov 2015. <http://www.bbc.com/news/uk-wales-34213693>
+<a name="ref7"/>[7] Feldthaus, Asger. "Checking Correctness of TypeScript Interfaces for JavaScript Libraries" <https://cs.au.dk/~amoeller/papers/tscheck/paper.pdf>
 
-Shire, Emily. "Saving Us From Ourselves: The Anti-Clickbait Movement." _Daily Beast_. 14 Jul 2014. 16 Nov 2015. <http://www.thedailybeast.com/articles/2014/07/14/saving-us-from-ourselves-the-anti-clickbait-movement.html>
+<a name="ref8"/>[8] Frampton, Ben. "Clickbait: The changing face of online journalism." _BBC News_. 14 Sep 2015. 16 Nov 2015. <http://www.bbc.com/news/uk-wales-34213693>
 
+<a name="ref9"/>[9] Shire, Emily. "Saving Us From Ourselves: The Anti-Clickbait Movement." _Daily Beast_. 14 Jul 2014. 16 Nov 2015. <http://www.thedailybeast.com/articles/2014/07/14/saving-us-from-ourselves-the-anti-clickbait-movement.html>
 
-
-"TypeScript: Language Specification." _Microsoft_. Feb 2015. 12 Nov. 2015. <http://www.typescriptlang.org/Content/TypeScript%20Language%20Specification.pdf>
+<a name="ref10"/>[10] GitHub search performed 16 Nov 2015. <https://github.com/search?l=typescript&q=tsconfig&type=Code&utf8=%E2%9C%93>
