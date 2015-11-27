@@ -7,7 +7,7 @@ fi
 
 COURSE=cs311
 SUBMISSION=${PWD##*/} # Current folder name
-PROPOSAL_RESUBMISSION=project-proposal
+RESUBMISSION=project-background-report
 
 PANDOC_CMD=/usr/local/bin/pandoc
 
@@ -20,16 +20,7 @@ if [ -f $PANDOC_CMD ]; then
       -V geometry:right=2.5cm \
       -V geometry:top=2.5cm \
       -V geometry:bottom=2.5cm \
-      ./$SUBMISSION.md -o ./$SUBMISSION.pdf
-
-    $PANDOC_CMD --latex-engine=xelatex --highlight-style=kate --number-sections \
-      -V linkcolor:black \
-      -V urlcolor:blue \
-      -V geometry:left=2.5cm \
-      -V geometry:right=2.5cm \
-      -V geometry:top=2.5cm \
-      -V geometry:bottom=2.5cm \
-      ./$PROPOSAL_RESUBMISSION.md -o ./$PROPOSAL_RESUBMISSION.pdf
+      ./$RESUBMISSION.md -o ./$RESUBMISSION.pdf
 else
     echo "$PANDOC_CMD not found; not compiling Markdown to PDF"
 fi
