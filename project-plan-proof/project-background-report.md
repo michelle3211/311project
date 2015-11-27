@@ -117,15 +117,15 @@ By publishing a library using this relatively-new build process, we are contribu
 
 <a name="ref2"/>[2] DeBill, Erik. "Module Counts." 16 Nov 2015 (data updated daily). <http://www.modulecounts.com/>
 
-[3] "TypeScript Handbook." _Microsoft_. 9 Nov. 2015. 12 Nov. 2015.  
-<a name="ref3a"/>[3a] <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Functions.md#lambdas-and-using-this>,
-<a name="ref3b"/>[3b] <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Generics.md>,
+[3] "TypeScript Handbook." _Microsoft_. 9 Nov. 2015. 12 Nov. 2015.<br>
+<a name="ref3a"/>[3a] <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Functions.md#lambdas-and-using-this>,<br>
+<a name="ref3b"/>[3b] <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Generics.md>,<br>
 <a name="ref3c"/>[3c] <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Mixins.md>
 
 <a name="ref3bi"/>[3bi] "TypeScript: Language Specification." _Microsoft_. Feb 2015. 12 Nov. 2015. <http://www.typescriptlang.org/Content/TypeScript%20Language%20Specification.pdf>
 
-[4] "What's new in TypesScript." _Microsoft_. 13 Nov 2015. 16 Nov 2015.
-<a name="ref4a"/>[4a] <https://github.com/Microsoft/TypeScript/wiki/What\'s-new-in-TypeScript#intersection-types>,
+[4] "What's new in TypesScript." _Microsoft_. 13 Nov 2015. 16 Nov 2015.<br>
+<a name="ref4a"/>[4a] <https://github.com/Microsoft/TypeScript/wiki/What\'s-new-in-TypeScript#intersection-types>,<br>
 <a name="ref4b"/>[4b] <https://github.com/Microsoft/TypeScript/wiki/What\'s-new-in-TypeScript#typescript-15>
 
 <a name="ref5"/>[5] Rabinowitz, Nick. "nrabinowitz/pjscrape (Git code repo)." 23 May 2014. 16 Nov 2015. <https://github.com/nrabinowitz/pjscrape>
