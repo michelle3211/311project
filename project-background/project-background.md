@@ -34,7 +34,7 @@ For the 100%-level milestone, we would complete the following:
 
 1. Write and publish an `npm` module in TypeScript which generates a JSON representation of linkbait articles by taking advantage of type checking.
 2. Write missing TypeScript type definition files for third-party `npm` modules that our `npm` module depends on.
-3. Verify that all of our written TypeScript type definition files are bugfree with [tscheck](https://github.com/asgerf/tscheck).
+3. Verify that all of our written TypeScript type definition files are bugfree with [tscheck](https://github.com/asgerf/tscheck).[[1]](#ref1)
 4. Use our `npm` module to create a simple Node.js+Express API server that runs the web scraper module and sends the resulting JSON articles to the browser client.
 5. Write a TypeScript single-page application browser client that renders the calculated backend JSON API data with jQuery and Backbone.js.
 
@@ -119,6 +119,7 @@ Standardized support for writing TypeScript `npm` modules that compile to JavaSc
 By publishing a library using this relatively-new build process, we are contributing to the TypeScript community by providing an additional working example of how to use this new build feature of the language, since there are only [678 results](https://github.com/search?l=typescript&q=tsconfig&type=Code&utf8=%E2%9C%93) when searching for GitHub code that use tsconfig.json files.
 
 # Citations
+<a name="ref1"/>[1] Feldthaus, Asger. "[asgerf/tscheck (Git repo)](https://github.com/asgerf/tscheck)." 15 Aug 2014. 16 Nov 2015.
 
 Feldthaus, Asger. "Checking Correctness of TypeScript Interfaces for JavaScript Libraries" <https://cs.au.dk/~amoeller/papers/tscheck/paper.pdf>
 
