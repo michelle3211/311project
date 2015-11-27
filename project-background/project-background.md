@@ -42,7 +42,7 @@ An explanation of how what each of these components are and how they showcase sp
 
 ## Write and publish an `npm` module in TypeScript which generates a JSON representation of linkbait articles by taking advantage of type checking.
 
-We've chosen to publish our project as an `npm` module because, according to [modulecounts.com](http://www.modulecounts.com/)[[2]](#ref2), it's the industry-standard JavaScript (and thus TypeScript) package management format for running code on [Node.js](https://nodejs.org/en/), the JavaScript runtime environment that allows our compiled TypeScript code to be executed server-side. By using a widely-accepted, industry-standard library format, we can ensure the core functionality of our project can be reused by other programmers.
+We've chosen to publish our project as an `npm` module because, according to [modulecounts.com](http://www.modulecounts.com/) [[2]](#ref2), it's the industry-standard JavaScript (and thus TypeScript) package management format for running code on [Node.js](https://nodejs.org/en/), the JavaScript runtime environment that allows our compiled TypeScript code to be executed server-side. By using a widely-accepted, industry-standard library format, we can ensure the core functionality of our project can be reused by other programmers.
 
 Specific TypeScript language features to be used by the module include:
 
@@ -71,11 +71,11 @@ If we were to write our subsequent data cleaning code without the usage of TypeS
 
 ## Write missing TypeScript type definition files for third-party `npm` modules that our `npm` module depends on.
 
-We plan on scraping the text content of existing websites in order to generate our own linkbait articles. This will require using the existing [pjscrape](https://github.com/nrabinowitz/pjscrape)[[5]](#ref5) JavaScript web scraping library. `pjscrape` currently does not have TypeScript type definitions within the [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)[[6]](#ref6) repository, so we'll need to inspect their `export`ed functions and write `module` and `interface` definitions for each of them.
+We plan on scraping the text content of existing websites in order to generate our own linkbait articles. This will require using the existing [pjscrape](https://github.com/nrabinowitz/pjscrape) [[5]](#ref5) JavaScript web scraping library. `pjscrape` currently does not have TypeScript type definitions within the [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) [[6]](#ref6) repository, so we'll need to inspect their `export`ed functions and write `module` and `interface` definitions for each of them.
 
 ## Verify that all of our written TypeScript type definition files are bugfree with [tscheck](https://github.com/asgerf/tscheck).
 
-`tscheck` is an existing JavaScript library based on research by Feldthaus and Møller that can be used to find bugs in handwritten TypeScript type definition files. Running this check ensures that the `module` and `interface` definitions that we need to write for the required `npm` modules (e.g. `pjscrape`) are bugfree, such that when our code calls their functions, TypeScript's `tsc` compiler will correctly perform static type checking. [[1]](#ref1),[[7]](#ref7)
+`tscheck` is an existing JavaScript library based on research by Feldthaus and Møller that can be used to find bugs in handwritten TypeScript type definition files. Running this check ensures that the `module` and `interface` definitions that we need to write for the required `npm` modules (e.g. `pjscrape`) are bugfree, such that when our code calls their functions, TypeScript's `tsc` compiler will correctly perform static type checking. [[1]](#ref1), [[7]](#ref7)
 
 ## Use our `npm` module to create a simple Node.js + Express API server that runs the web scraper module and sends the resulting JSON articles to the browser client.
 
