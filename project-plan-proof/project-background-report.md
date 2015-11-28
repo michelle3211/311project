@@ -116,8 +116,12 @@ By publishing a library using this relatively-new build process, we are contribu
 
 [^1]: A citation without locators [@item1].
 [^2]: A citation without locators [@item2].
-[^3]: A citation without locators [@item3].
-[^4]: A citation without locators [@item4].
+[^3a]: A citation without locators [@item3a].
+[^3b]: A citation without locators [@item3b].
+[^3c]: A citation without locators [@item3c].
+[^3bi]: A citation without locators [@item3bi].
+[^4a]: A citation without locators [@item4a].
+[^4b]: A citation without locators [@item4b].
 [^5]: A citation without locators [@item5].
 [^6]: A citation without locators [@item6].
 [^7]: A citation without locators [@item7].
