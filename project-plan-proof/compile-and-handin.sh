@@ -47,3 +47,7 @@ echo "cleaning up pdflatex files"
 rm $RESUBMISSION.out
 rm $RESUBMISSION.log
 rm $RESUBMISSION.aux
+
+git add $RESUBMISSION.pdf
+git commit -m "[pdf] recompile"
+git push origin master
