@@ -46,7 +46,7 @@ ssh -t $REMOTE_USER@$REMOTE_HOST bash -c "'
          $HANDIN_CMD -c    $COURSE $SUBMISSION
 '"
 
-echo "cleaning up pdflatex files"
+echo "cleaning up build files"
 rm $RESUBMISSION.out
 rm $RESUBMISSION.log
 rm $RESUBMISSION.aux
