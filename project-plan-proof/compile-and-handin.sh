@@ -9,38 +9,8 @@ COURSE=cs311
 SUBMISSION=${PWD##*/} # Current folder name
 RESUBMISSION=project-background-report
 
-PANDOC_CMD=/usr/local/bin/pandoc
-PANDOC_INPUT_FORMAT=markdown+header_attributes+citations+shortcut_reference_links
-BIB=./bib.yaml
-CSL=./ieee.csl
-
-if [ -f $PANDOC_CMD ]; then
-    echo "compiling example Markdown to PDF"
-    $PANDOC_CMD -s -S --latex-engine=xelatex --highlight-style=kate --number-sections \
-      -V linkcolor:black \
-      -V urlcolor:blue \
-      -V geometry:left=2.5cm \
-      -V geometry:right=2.5cm \
-      -V geometry:top=2.5cm \
-      -V geometry:bottom=2.5cm \
-      -f $PANDOC_INPUT_FORMAT \
-      --bibliography ./example_bib.yaml --filter pandoc-citeproc --csl $CSL \
-      ./example_markdown.md -o ./example_output.pdf
-
-    echo "compiling Markdown to PDF"
-    $PANDOC_CMD -s -S --latex-engine=xelatex --highlight-style=kate --number-sections \
-      -V linkcolor:black \
-      -V urlcolor:blue \
-      -V geometry:left=2.5cm \
-      -V geometry:right=2.5cm \
-      -V geometry:top=2.5cm \
-      -V geometry:bottom=2.5cm \
-      -f $PANDOC_INPUT_FORMAT \
-      --bibliography $BIB --filter pandoc-citeproc --csl $CSL \
-      ./$RESUBMISSION.md -o ./$RESUBMISSION.pdf
-else
-    echo "$PANDOC_CMD not found; not compiling Markdown to PDF"
-fi
+echo "compiling TeX to PDF"
+/usr/texbin/pdflatex $RESUBMISSION.tex
 
 if [ "$2" ]; then
     echo "Not copying files to remote server"
@@ -60,13 +30,7 @@ ssh -t $REMOTE_USER@$REMOTE_HOST bash -c "'
     mkdir -p $REMOTE_DIR
 '"
 
-for f in $LOCAL_FILES; do
-    if [[ $f == *"handin"* ]]; then continue; fi # Skip copying handin script
-    if [[ $f == *".md"*    ]]; then continue; fi # Skip copying Markdown files
-    if [[ -d $f            ]]; then continue; fi # Skip copying directories
-    REMOTE_PATH=$REMOTE_DIR`printf '%s\n' "${f##*/}"`
-    scp -p $f $REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH
-done
+scp -p $RESUBMISSION.pdf $REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR/$RESUBMISSION.pdf
 
 ssh -t $REMOTE_USER@$REMOTE_HOST bash -c "'
     echo $HANDIN_CMD       $COURSE $SUBMISSION running handin for the first time
