@@ -1,0 +1,348 @@
+\documentclass[]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={CPSC 311 Team T3},
+            pdftitle={Background Report: TypeScript Webapp -- Linkbait Article Generator},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{0}
+
+\title{Background Report: TypeScript Webapp -- Linkbait Article Generator}
+\author{CPSC 311 Team T3}
+\date{November 27, 2015}
+
+\begin{document}
+\maketitle
+
+Name: Ashley Lee\\Ugrad ID: k7y8\\Student ID: 34959122\\Email:
+alee238@hotmail.com
+
+Name: Min Seok Ray Roh\\Ugrad ID: l9x9a\\Student ID: 33737123\\Email:
+msroh94@gmail.com
+
+Name: Michelle Wilson\\Ugrad ID: a2d0b\\Student ID: 60855087\\Email:
+m888wilson@gmail.com
+
+Name: Cecile Leung\\Ugrad ID: o8r6\\Student ID: 90600974\\Email:
+cecilephl@gmail.com
+
+Name: Norman Sue\\Ugrad ID: h0e9\\Student ID: 20396131\\Email
+normansue3@gmail.com
+
+\section{Project Overview}\label{project-overview}
+
+For the 100\%-level milestone, we would complete the following:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Write and publish an \texttt{npm} module in TypeScript which generates
+  a JSON representation of linkbait articles by taking advantage of type
+  checking.
+\item
+  Write missing TypeScript type definition files for third-party
+  \texttt{npm} modules that our \texttt{npm} module depends on.
+\item
+  Verify that all of our written TypeScript type definition files are
+  bugfree with
+  \href{https://github.com/asgerf/tscheck}{tscheck}.\cite{ref1}
+\item
+  Use our \texttt{npm} module to create a simple Node.js+Express API
+  server that runs the web scraper module and sends the resulting JSON
+  articles to the browser client.
+\item
+  Write a TypeScript single-page application browser client that renders
+  the calculated backend JSON API data with jQuery and Backbone.js.
+\end{enumerate}
+
+An explanation of how what each of these components are and how they
+showcase specific TypeScript language features is given in the following
+subsections.
+
+\subsection{Write and publish an \texttt{npm} module in TypeScript which
+generates a JSON representation of linkbait articles by taking advantage
+of type
+checking.}\label{write-and-publish-an-npm-module-in-typescript-which-generates-a-json-representation-of-linkbait-articles-by-taking-advantage-of-type-checking.}
+
+We've chosen to publish our project as an \texttt{npm} module because,
+according to \href{http://www.modulecounts.com/}{modulecounts.com}
+\cite{ref2}, it's the industry-standard JavaScript (and
+thus TypeScript) package management format for running code on
+\href{https://nodejs.org/en/}{Node.js}, the JavaScript runtime
+environment that allows our compiled TypeScript code to be executed
+server-side. By using a widely-accepted, industry-standard library
+format, we can ensure the core functionality of our project can be
+reused by other programmers.
+
+Specific TypeScript language features to be used by the module include:
+
+\subsubsection{Functions}\label{functions}
+
+As TypeScript is a superscript of JavaScript, there are similarities
+between them, however, when writing the former, there are differences
+that will compile into the latter. These differences may give
+flexibility in writing functions. Undoubtedly, when coding our linkbait
+article generator, we're going to end up using functions to represent
+the behavior of the generator, while probably encapsulating those in
+classes. TypeScript has added functionality to functions that JavaScript
+does not, such as binding the context of `this', contextual typing, and
+the ability for optional and default parameters.
+\cite{ref3}  These capabilities make it easier to code and
+maintain a typed program, which will help us maintain our code better
+than if we coded in JavaScript.
+
+\subsubsection{Generics}\label{generics}
+
+In TypeScript, if a generic function is created, the compiler will
+enforce that all the actions taken in the function are used in such a
+way that they \emph{could} work with all types. So if you attempt an
+operation that is only allowed for type \texttt{String} but not
+\texttt{Object}, it will be forbidden (causes an
+error).\cite{ref3} But this is recognized only at compile
+time. There is no run-time representation for type
+parameters.\cite{ref3bi}
+
+Despite this, static-checking of the appropriate usage of generic types
+will be useful for when we iterate over possible articles in a
+\texttt{for... each} loop, to perform bulk formatting such as inserting
+abbreviations for our headlines.
+
+\subsubsection{Mixins}\label{mixins}
+
+Mixins are a way of reusing code to make new classes by combining
+desired parts of existing classes without taking on all features of
+those classes. The specificity of which methods are retained avoids the
+problems from ambiguity that comes up in multiple inheritance otherwise.
+They are useful in situations where a particular behaviour is repeated
+in many classes, providing optional behaviour in a class, and making
+variations on similar features in the augmented class.
+\cite{ref3}
+
+\subsubsection{Intersection Types}\label{intersection-types}
+
+By using the \texttt{pjscrape} web scraping library, we will collect an
+\texttt{Array} of parsed data from other popular articles, which will
+ensure that our generated articles' headlines will have a high chance of
+being clicked on.
+
+However, the types of the objects within the collected \texttt{Array}
+data will be unknown ahead of time, aside from the fact that they could
+be a mathematical union of a discrete number of types. TypeScript's
+intersection types feature \cite{ref4} allows us to
+statically check that our subsequent functions use the parsed
+\texttt{Array} elements in a way that's consistent with JavaScript's
+built-in methods on native library types. For example, we can only call
+\texttt{String.prototype.concat} on \texttt{String} types, but the
+elements may be both \texttt{String} and \texttt{Number} types, since
+some of the articles we parse may contain numeric data.
+
+If we were to write our subsequent data cleaning code without the usage
+of TypeScript's static type checking features, it may result in
+JavaScript \texttt{TypeError}s.
+
+\subsection{Write missing TypeScript type definition files for
+third-party \texttt{npm} modules that our \texttt{npm} module depends
+on.}\label{write-missing-typescript-type-definition-files-for-third-party-npm-modules-that-our-npm-module-depends-on.}
+
+We plan on scraping the text content of existing websites in order to
+generate our own linkbait articles. This will require using the existing
+\href{https://github.com/nrabinowitz/pjscrape}{pjscrape}
+\cite{ref5} JavaScript web scraping library.
+\texttt{pjscrape} currently does not have TypeScript type definitions
+within the
+\href{https://github.com/DefinitelyTyped/DefinitelyTyped}{DefinitelyTyped}
+\cite{ref6} repository, so we'll need to inspect their
+\texttt{export}ed functions and write \texttt{module} and
+\texttt{interface} definitions for each of them.
+
+\subsection{Verify that all of our written TypeScript type definition
+files are bugfree with
+\href{https://github.com/asgerf/tscheck}{tscheck}.}\label{verify-that-all-of-our-written-typescript-type-definition-files-are-bugfree-with-tscheck.}
+
+\texttt{tscheck} is an existing JavaScript library based on research by
+Feldthaus and Møller that can be used to find bugs in handwritten
+TypeScript type definition files. Running this check ensures that the
+\texttt{module} and \texttt{interface} definitions that we need to write
+for the required \texttt{npm} modules (e.g. \texttt{pjscrape}) are
+bugfree, such that when our code calls their functions, TypeScript's
+\texttt{tsc} compiler will correctly perform static type checking.
+\cite{ref1}, \cite{ref7}
+
+\subsection{Use our \texttt{npm} module to create a simple Node.js +
+Express API server that runs the web scraper module and sends the
+resulting JSON articles to the browser
+client.}\label{use-our-npm-module-to-create-a-simple-node.js-express-api-server-that-runs-the-web-scraper-module-and-sends-the-resulting-json-articles-to-the-browser-client.}
+
+\href{http://expressjs.com/}{Express.js} is the most commonly used
+Node.js library for creating minimalistic API servers. We will use it to
+serve the HTML, CSS and compiled JavaScript browser client.
+
+\subsection{Write a TypeScript single-page application browser client
+that renders the calculated backend JSON API data with jQuery and
+Backbone.js.}\label{write-a-typescript-single-page-application-browser-client-that-renders-the-calculated-backend-json-api-data-with-jquery-and-backbone.js.}
+
+Our browser client will use \href{http://backbonejs.org/}{Backbone.js},
+one of the popular client-side JavaScript frameworks for providing
+structure to the registration of jQuery callback functions to the
+various DOM elements that we'll use to render our API's JSON data
+containing the generated linkbait articles.
+
+\section{Project Value}\label{project-value}
+
+Of the most popular compile-to-JS languages, TypeScript greatly lags
+behind in adoption and has significantly fewer exemplary repositories to
+draw inspiration from. There are currently 8,267 TypeScript repositories
+on GitHub, compared with the 1.7 million JavaScript and 54,605
+CoffeeScript (the leading compile-to-JS language that competes with
+TypeScript) repositories.
+
+Creating an additional TypeScript project provides future potential
+TypeScript programmers with an additional example of how they could
+utilize TypeScript's static typing features.
+
+\section{Project Importance}\label{project-importance}
+
+\subsection{Background}\label{background}
+
+Clickbait is a term for headlines that catch people's attention and
+curiosity enough for them to follow a link. The main goal is for the
+user to click through to the target website. Secondary is the content,
+which has a reputation for being of very low quality. They exist due to
+a business model whereby the more visitors there are to a website, the
+more advertisers are willing to pay to use that site. Ads on that site
+gain more visibility with each visitor and can have further referral
+links. More visitors can also affect a site's rank when it shows up on
+search results due to search engine optimization (SEO) rules. Therefore,
+any click-through on a link can have compounding effects on visibility
+and subsequently revenue from advertising.
+
+\subsection{Negatives and possible positive
+side-effects}\label{negatives-and-possible-positive-side-effects}
+
+Clickbait (also known as linkbait) headlines may read like news, but the
+articles are often hastily created with little research, no insight,
+misleading information, or they can be outright advertisements
+masquerading as impartial articles. It can annoy consumers
+\cite{ref8} and it can also affect the way content is
+created, encouraging poor journalism \cite{ref9}. So, there
+is little \emph{inherent} value to creating clickbait. However, we may
+gain some beneficial knowledge as a byproduct. Creating successful
+clickbait involves the psychology of curiosity and persuasion. If we can
+learn more about what works, we can put it to good use (without annoying
+the readership) by providing high quality content at the target site.
+For example, actual information.
+
+\subsection{Our perspective}\label{our-perspective}
+
+We chose this as our application because it would be an amusing way to
+showcase the features of TypeScript. However, it could be extended to
+track data on which generated headlines are successful (number of click
+throughs and duration spent on target sites). This information could be
+used to learn how to best reach certain audiences with information. It
+could be anything from public health outreach to how undergrads can
+apply for co-op. Another possible benefit is that our team could sign up
+for ad revenue and make money for this project.
+
+\section{Project Impact}\label{project-impact}
+
+Standardized support for writing TypeScript \texttt{npm} modules that
+compile to JavaScript by using
+\href{https://github.com/Microsoft/TypeScript/wiki/tsconfig.json}{tsconfig.json
+files} to integrate with existing JavaScript and TypeScript \texttt{npm}
+modules has only been added 4 months ago in TS 1.5.
+\cite{ref4}
+
+By publishing a library using this relatively-new build process, we are
+contributing to the TypeScript community by providing an additional
+working example of how to use this new build feature of the language,
+since there are only 678 results \cite{ref10} when
+searching for GitHub code that use tsconfig.json files.
+
+
+\begin{thebibliography}{15}
+\bibitem{ref1}
+Feldthaus, Asger. ``asgerf/tscheck (Git code repo).'' 15 Aug
+2014. 16 Nov 2015. \url{https://github.com/asgerf/tscheck}
+
+\bibitem{ref2}
+DeBill, Erik. ``Module Counts.'' 16 Nov 2015 (data updated
+daily). \url{http://www.modulecounts.com/}
+
+\bibitem{ref3}
+``TypeScript Handbook.'' \emph{Microsoft}. 9 Nov. 2015. 12 Nov.2015.
+\url{https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Functions.md\#lambdas-and-using-this}, \url{https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Generics.md}, \url{https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Mixins.md}
+
+\bibitem{ref3bi}
+``TypeScript: Language Specification.'' \emph{Microsoft}. Feb
+2015. 12 Nov. 2015.
+\url{http://www.typescriptlang.org/Content/TypeScript\%20Language\%20Specification.pdf}
+
+\bibitem{ref4}
+``What's new in TypesScript.'' \emph{Microsoft}. 13 Nov 2015. 16Nov 2015.
+\url{https://github.com/Microsoft/TypeScript/wiki/What/'s-new-in-TypeScript\#intersection-types}, \url{https://github.com/Microsoft/TypeScript/wiki/What/'s-new-in-TypeScript\#typescript-15}
+
+\bibitem{ref5}
+Rabinowitz, Nick. ``nrabinowitz/pjscrape (Git code repo).'' 23
+May 2014. 16 Nov 2015. \url{https://github.com/nrabinowitz/pjscrape}
+
+\bibitem{ref6}
+``DefinitelyTyped: The repository for high quality TypeScript
+type definitions.'' 23 May 2014. 16 Nov 2015.
+\url{https://github.com/DefinitelyTyped/DefinitelyTyped} also
+\url{http://definitelytyped.org/}
+
+\bibitem{ref7}
+Feldthaus, Asger. ``Checking Correctness of TypeScript
+Interfaces for JavaScript Libraries''
+\url{https://cs.au.dk/~amoeller/papers/tscheck/paper.pdf}
+
+\bibitem{ref8}
+Frampton, Ben. ``Clickbait: The changing face of online
+journalism.'' \emph{BBC News}. 14 Sep 2015. 16 Nov 2015.
+\url{http://www.bbc.com/news/uk-wales-34213693}
+
+\bibitem{ref9} Shire, Emily. ``Saving Us From Ourselves: The Anti-Clickbait
+Movement.'' \emph{Daily Beast}. 14 Jul 2014. 16 Nov 2015.
+\url{http://www.thedailybeast.com/articles/2014/07/14/saving-us-from-ourselves-the-anti-clickbait-movement.html}
+
+\bibitem{ref10}
+GitHub search performed 16 Nov 2015.
+\url{https://github.com/search?l=typescript\&q=tsconfig\&type=Code\&utf8=\%E2\%9C\%93}
+\end{thebibliography}
+\end{document}
