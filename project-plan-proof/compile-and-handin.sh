@@ -11,10 +11,12 @@ RESUBMISSION=project-background-report
 
 PANDOC_CMD=/usr/local/bin/pandoc
 PANDOC_INPUT_FORMAT=markdown+header_attributes+citations+shortcut_reference_links
+BIB=./bib.yaml
+CSL=./apa.csl
 
 if [ -f $PANDOC_CMD ]; then
-    echo "compiling Markdown to PDF"
-    $PANDOC_CMD --latex-engine=xelatex --highlight-style=kate --number-sections \
+    # echo "compiling Markdown to PDF"
+    $PANDOC_CMD -s -S --latex-engine=xelatex --highlight-style=kate --number-sections \
       -V linkcolor:black \
       -V urlcolor:blue \
       -V geometry:left=2.5cm \
@@ -22,9 +24,15 @@ if [ -f $PANDOC_CMD ]; then
       -V geometry:top=2.5cm \
       -V geometry:bottom=2.5cm \
       -f $PANDOC_INPUT_FORMAT \
+      --bibliography $BIB --filter pandoc-citeproc --csl $CSL \
       ./$RESUBMISSION.md -o ./$RESUBMISSION.pdf
 else
     echo "$PANDOC_CMD not found; not compiling Markdown to PDF"
+fi
+
+if [ "$2" ]; then
+    echo "Not copying files to remote server"
+    exit 1
 fi
 
 REMOTE_USER=$1
