@@ -11,6 +11,9 @@ RESUBMISSION=project-background-report
 
 echo "compiling TeX to PDF"
 /usr/texbin/pdflatex $RESUBMISSION.tex
+/usr/texbin/bibtex   $RESUBMISSION.tex
+/usr/texbin/pdflatex $RESUBMISSION.tex
+/usr/texbin/pdflatex $RESUBMISSION.tex
 
 if [ "$2" ]; then
     echo "Not copying files to remote server"
