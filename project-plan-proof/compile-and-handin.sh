@@ -42,3 +42,8 @@ ssh -t $REMOTE_USER@$REMOTE_HOST bash -c "'
     echo $HANDIN_CMD -c    $COURSE $SUBMISSION checking files that were handed in
          $HANDIN_CMD -c    $COURSE $SUBMISSION
 '"
+
+echo "cleaning up pdflatex files"
+rm $RESUBMISSION.out
+rm $RESUBMISSION.log
+rm $RESUBMISSION.aux
