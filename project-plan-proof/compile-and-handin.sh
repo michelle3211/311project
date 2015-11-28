@@ -12,7 +12,7 @@ RESUBMISSION=project-background-report
 PANDOC_CMD=/usr/local/bin/pandoc
 PANDOC_INPUT_FORMAT=markdown+header_attributes+citations+shortcut_reference_links
 BIB=./bib.yaml
-CSL=./apa.csl
+CSL=./ieee.csl
 
 if [ -f $PANDOC_CMD ]; then
     echo "compiling example Markdown to PDF"
