@@ -15,7 +15,19 @@ BIB=./bib.yaml
 CSL=./apa.csl
 
 if [ -f $PANDOC_CMD ]; then
-    # echo "compiling Markdown to PDF"
+    echo "compiling example Markdown to PDF"
+    $PANDOC_CMD -s -S --latex-engine=xelatex --highlight-style=kate --number-sections \
+      -V linkcolor:black \
+      -V urlcolor:blue \
+      -V geometry:left=2.5cm \
+      -V geometry:right=2.5cm \
+      -V geometry:top=2.5cm \
+      -V geometry:bottom=2.5cm \
+      -f $PANDOC_INPUT_FORMAT \
+      --bibliography ./example_bib.yaml --filter pandoc-citeproc --csl $CSL \
+      ./example_markdown.md -o ./example_output.pdf
+
+    echo "compiling Markdown to PDF"
     $PANDOC_CMD -s -S --latex-engine=xelatex --highlight-style=kate --number-sections \
       -V linkcolor:black \
       -V urlcolor:blue \
