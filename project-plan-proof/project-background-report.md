@@ -113,29 +113,14 @@ Standardized support for writing TypeScript `npm` modules that compile to JavaSc
 By publishing a library using this relatively-new build process, we are contributing to the TypeScript community by providing an additional working example of how to use this new build feature of the language, since there are only 678 results [[10]](#ref10) when searching for GitHub code that use tsconfig.json files.
 
 # Citations
-<a name="ref1"/>[1] Feldthaus, Asger. "asgerf/tscheck (Git code repo)." 15 Aug 2014. 16 Nov 2015. <https://github.com/asgerf/tscheck>
 
-<a name="ref2"/>[2] DeBill, Erik. "Module Counts." 16 Nov 2015 (data updated daily). <http://www.modulecounts.com/>
-
-[3] "TypeScript Handbook." _Microsoft_. 9 Nov. 2015. 12 Nov. 2015.<br>
-<a name="ref3a"/>[3a] <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Functions.md#lambdas-and-using-this>,<br>
-<a name="ref3b"/>[3b] <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Generics.md>,<br>
-<a name="ref3c"/>[3c] <https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Mixins.md>
-
-<a name="ref3bi"/>[3bi] "TypeScript: Language Specification." _Microsoft_. Feb 2015. 12 Nov. 2015. <http://www.typescriptlang.org/Content/TypeScript%20Language%20Specification.pdf>
-
-[4] "What's new in TypesScript." _Microsoft_. 13 Nov 2015. 16 Nov 2015.<br>
-<a name="ref4a"/>[4a] <https://github.com/Microsoft/TypeScript/wiki/What\'s-new-in-TypeScript#intersection-types>,<br>
-<a name="ref4b"/>[4b] <https://github.com/Microsoft/TypeScript/wiki/What\'s-new-in-TypeScript#typescript-15>
-
-<a name="ref5"/>[5] Rabinowitz, Nick. "nrabinowitz/pjscrape (Git code repo)." 23 May 2014. 16 Nov 2015. <https://github.com/nrabinowitz/pjscrape>
-
-<a name="ref6"/>[6] "DefinitelyTyped: The repository for high quality TypeScript type definitions." 23 May 2014. 16 Nov 2015. <https://github.com/DefinitelyTyped/DefinitelyTyped> also <http://definitelytyped.org/>
-
-<a name="ref7"/>[7] Feldthaus, Asger. "Checking Correctness of TypeScript Interfaces for JavaScript Libraries" <https://cs.au.dk/~amoeller/papers/tscheck/paper.pdf>
-
-<a name="ref8"/>[8] Frampton, Ben. "Clickbait: The changing face of online journalism." _BBC News_. 14 Sep 2015. 16 Nov 2015. <http://www.bbc.com/news/uk-wales-34213693>
-
-<a name="ref9"/>[9] Shire, Emily. "Saving Us From Ourselves: The Anti-Clickbait Movement." _Daily Beast_. 14 Jul 2014. 16 Nov 2015. <http://www.thedailybeast.com/articles/2014/07/14/saving-us-from-ourselves-the-anti-clickbait-movement.html>
-
-<a name="ref10"/>[10] GitHub search performed 16 Nov 2015. <https://github.com/search?l=typescript&q=tsconfig&type=Code&utf8=%E2%9C%93>
+[^1]: A citation without locators [@item1].
+[^2]: A citation without locators [@item2].
+[^3]: A citation without locators [@item3].
+[^4]: A citation without locators [@item4].
+[^5]: A citation without locators [@item5].
+[^6]: A citation without locators [@item6].
+[^7]: A citation without locators [@item7].
+[^8]: A citation without locators [@item8].
+[^9]: A citation without locators [@item9].
+[^10]: A citation without locators [@item10].
